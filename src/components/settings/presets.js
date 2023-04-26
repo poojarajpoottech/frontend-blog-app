@@ -14,21 +14,21 @@ export const presets = [
   // CYAN
   {
     name: 'cyan',
-    lighter: '#EBD6FD',
-    light: '#B985F4',
-    main: '#7635dc',
-    dark: '#431A9E',
-    darker: '#200A69',
+    lighter: '#CCF4FE',
+    light: '#68CDF9',
+    main: '#078DEE',
+    dark: '#0351AB',
+    darker: '#012972',
     contrastText: '#FFFFFF',
   },
   // PURPLE
   {
     name: 'purple',
-    lighter: '#C8FACD',
-    light: '#5BE584',
-    main: '#00AB55',
-    dark: '#007B55',
-    darker: '#005249',
+    lighter: '#EBD6FD',
+    light: '#B985F4',
+    main: '#7635dc',
+    dark: '#431A9E',
+    darker: '#200A69',
     contrastText: '#FFFFFF',
   },
   // BLUE
@@ -54,11 +54,11 @@ export const presets = [
   // RED
   {
     name: 'red',
-    lighter: '#FFE3D5',
-    light: '#FFC1AC',
-    main: '#FF3030',
-    dark: '#B71833',
-    darker: '#7A0930',
+    lighter: '#C8FACD',
+    light: '#5BE584',
+    main: '#00AB55',
+    dark: '#007B55',
+    darker: '#005249',
     contrastText: '#FFFFFF',
   },
 ];

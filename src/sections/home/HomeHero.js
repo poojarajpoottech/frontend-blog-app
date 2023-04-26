@@ -24,7 +24,7 @@ import { MotionContainer, varFade } from '../../components/animate';
 
 const StyledRoot = styled('div')(({ theme }) => ({
   position: 'relative',
-  background: `url('/assets/background/banner.jpg')`,
+  background: `url('/assets/background/banner_5.jpg')`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
@@ -180,13 +180,7 @@ function Description() {
         <Typography variant="h6" sx={{ color: 'grey.300' }}>
           <Typewriter
             options={{
-              strings: [
-                'Web Development',
-                'Mobile App Development',
-                'UI/UX Designer',
-                'Designwithsatya',
-                'Node Developerf',
-              ],
+              strings: ['Web Developer', 'App Developer', 'UI/UX Designer', 'Designwithsatya'],
               autoStart: true,
               loop: true,
               delay: 90,
