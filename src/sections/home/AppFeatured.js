@@ -3,7 +3,7 @@ import { m } from 'framer-motion';
 import { useState, useRef } from 'react';
 // @mui
 import { alpha, useTheme, styled } from '@mui/material/styles';
-import { Stack, Card, Typography, Link, Container, Grid } from '@mui/material';
+import { Stack, Card, Typography, Link, Grid } from '@mui/material';
 // components
 import Image from '../../components/image';
 import { MotionContainer, varFade } from '../../components/animate';
@@ -61,25 +61,23 @@ export default function AppFeatured({ list, ...other }) {
   };
 
   return (
-    <Container>
-      <Grid container spacing={3}>
-        <Grid item xs={12} md={12}>
-          <Card {...other}>
-            <Carousel ref={carouselRef} {...carouselSettings}>
-              {list.map((app, index) => (
-                <CarouselItem key={app.id} item={app} isActive={index === currentIndex} />
-              ))}
-            </Carousel>
+    <Grid container spacing={3} sx={{ mb: 2 }}>
+      <Grid item xs={12} md={12}>
+        <Card {...other}>
+          <Carousel ref={carouselRef} {...carouselSettings}>
+            {list.map((app, index) => (
+              <CarouselItem key={app.id} item={app} isActive={index === currentIndex} />
+            ))}
+          </Carousel>
 
-            <CarouselArrows
-              onNext={handleNext}
-              onPrevious={handlePrev}
-              sx={{ top: 8, right: 8, position: 'absolute', color: 'common.white' }}
-            />
-          </Card>
-        </Grid>
+          <CarouselArrows
+            onNext={handleNext}
+            onPrevious={handlePrev}
+            sx={{ top: 8, right: 8, position: 'absolute', color: 'common.white' }}
+          />
+        </Card>
       </Grid>
-    </Container>
+    </Grid>
   );
 }
 

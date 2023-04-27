@@ -14,10 +14,39 @@ import MainLayout from '../../layouts/main';
 import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../../sections/blog';
 import axios from '../../utils/axios';
 
+import { AppFeatured } from '../../sections/home';
+
 const SORT_OPTIONS = [
   { value: 'latest', label: 'Latest' },
   { value: 'popular', label: 'Popular' },
   { value: 'oldest', label: 'Oldest' },
+];
+
+const _appFeatured = [
+  {
+    id: 1,
+    image: '/assets/images/banner/banner_2.jpg',
+    title: 'Latest Update',
+    description: 'UX',
+  },
+  {
+    id: 2,
+    image: '/assets/images/banner/banner_3.jpg',
+    title: 'Latest Update',
+    description: 'demo',
+  },
+  {
+    id: 3,
+    image: '/assets/images/banner/banner_4.jpg',
+    title: 'Latest Update',
+    description: 'demo',
+  },
+  {
+    id: 4,
+    image: '/assets/images/banner/banner_5.jpg',
+    title: 'Latest Update',
+    description: 'Update',
+  },
 ];
 
 BlogPostsPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
@@ -51,6 +80,7 @@ export default function BlogPostsPage() {
         <title> Blog: Posts | designwithsatya</title>
       </Head>
       <Container maxWidth={themeStretch ? false : 'lg'}>
+        <AppFeatured list={_appFeatured} />
         <CustomBreadcrumbs
           heading="Blog Tutorial"
           links={[

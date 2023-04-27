@@ -66,7 +66,7 @@ const StyledGradientText = styled(m.h1)(({ theme }) => ({
   marginBottom: 24,
   letterSpacing: 8,
   [theme.breakpoints.up('md')]: {
-    fontSize: `${74 / 22}rem`,
+    fontSize: `${96 / 32}rem`,
   },
 }));
 
@@ -155,7 +155,7 @@ function Description() {
         </StyledGradientText>
       </m.div>
       <m.div variants={varFade().in}>
-        <Typography variant="h6" sx={{ textAlign: 'center', color: 'grey.300' }}>
+        <Typography variant="h6" sx={{ textAlign: 'center', color: 'grey.500' }}>
           Learn the latest digital skills for tomorrow jobs The fastest, most effective youtube
           video to get future-ready.
         </Typography>
@@ -174,13 +174,13 @@ function Description() {
         </StyledGradientText>
       </m.div>
       <Stack spacing={1.5} direction={{ xs: 'row', sm: 'row' }} sx={{ mb: 5 }}>
-        <Typography variant="h6" sx={{ color: '#078DEE' }}>
+        <Typography variant="h6" sx={{ color: '#00AB55' }}>
           A Website For
         </Typography>
         <Typography variant="h6" sx={{ color: 'grey.300' }}>
           <Typewriter
             options={{
-              strings: ['Web Developer', 'App Developer', 'UI/UX Designer', 'Designwithsatya'],
+              strings: ['Web Developer', 'App Developer', 'YouTuber', 'Designwithsatya'],
               autoStart: true,
               loop: true,
               delay: 90,
