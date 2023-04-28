@@ -21,7 +21,9 @@ const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 export default function ContactForm() {
-  const [userData, setuserData] = useState({});
+  // const [token, setToken] = useState(null);
+
+  const [userData, setUserData] = useState(null);
   const { enqueueSnackbar } = useSnackbar();
 
   const RegisterSchema = Yup.object().shape({
@@ -75,19 +77,38 @@ export default function ContactForm() {
       });
     }
   };
-  const GetData = async () => {
+  // Get Token From backend
+
+  const getToken = async () => {
     try {
-      const Response = await axios.get(`${process.env.HOST_API_KEY}/api/getdata`, {
-        method: 'GET',
+      const response = await axios.get(`${process.env.HOST_API_KEY}/api/gettoken`, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      const token = await response.data.token;
+      console.log(token);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getToken();
+  }, []);
+
+  const getData = async () => {
+    try {
+      const response = await axios.get(`${process.env.HOST_API_KEY}/api/getdata`, {
         headers: {
           'Content-Type': 'application/json',
         },
         credentials: 'include',
       });
-      const resultdata = await Response;
-      setuserData(resultdata);
-      console.log(userData);
-      if (!resultdata.status === 200) {
+      const resultdata = response.data;
+      setUserData(resultdata);
+      console.log(resultdata);
+      if (resultdata.status !== 200) {
         const error = new Error(resultdata.error);
         throw error;
       }
@@ -97,9 +118,10 @@ export default function ContactForm() {
   };
 
   useEffect(() => {
-    GetData();
-  });
+    getData();
+  }, []);
 
+  console.log(userData);
   return (
     <Stack component={MotionViewport} spacing={5}>
       <m.div variants={varFade().inUp}>
