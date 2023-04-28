@@ -23,7 +23,7 @@ const phoneRegExp =
 export default function ContactForm() {
   // const [token, setToken] = useState(null);
 
-  const [userData, setUserData] = useState(null);
+  // const [userData, setUserData] = useState(null);
   const { enqueueSnackbar } = useSnackbar();
 
   const RegisterSchema = Yup.object().shape({
@@ -97,31 +97,30 @@ export default function ContactForm() {
     getToken();
   }, []);
 
-  const getData = async () => {
-    try {
-      const response = await axios.get(`${process.env.HOST_API_KEY}/api/getdata`, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        credentials: 'include',
-      });
-      const resultdata = response.data;
-      setUserData(resultdata);
-      console.log(resultdata);
-      if (resultdata.status !== 200) {
-        const error = new Error(resultdata.error);
-        throw error;
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const getData = async () => {
+  //   try {
+  //     const response = await axios.get(`${process.env.HOST_API_KEY}/api/getdata`, {
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       credentials: 'include',
+  //     });
+  //     const resultdata = response.data;
+  //     setUserData(resultdata);
+  //     console.log(resultdata);
+  //     if (resultdata.status !== 200) {
+  //       const error = new Error(resultdata.error);
+  //       throw error;
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  // }, []);
 
-  console.log(userData);
   return (
     <Stack component={MotionViewport} spacing={5}>
       <m.div variants={varFade().inUp}>
