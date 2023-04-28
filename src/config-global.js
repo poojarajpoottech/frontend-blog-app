@@ -1,4 +1,5 @@
 export const HOST_API_KEY = process.env.HOST_API_KEY || '';
+export const MAP_API = process.env.MAPBOX_API;
 
 export const HEADER = {
   H_MOBILE: 64,

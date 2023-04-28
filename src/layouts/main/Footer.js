@@ -75,8 +75,8 @@ export default function Footer() {
 
           <Grid item xs={8} md={3}>
             <Typography variant="body2" sx={{ pr: { md: 5 } }}>
-              We build websites or mobile application,SEO maintain, for startups and large
-              enterprises.
+              We specialize in developing websites and mobile applications, providing SEO
+              maintenance services, and catering to both startups and large enterprises.
             </Typography>
 
             <Stack

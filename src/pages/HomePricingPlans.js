@@ -181,12 +181,8 @@ function PlanCard() {
                       type="submit"
                       role="link"
                       sx={{
-                        bgcolor: 'text.primary',
                         color: (theme) =>
-                          theme.palette.mode === 'light' ? 'common.white' : 'grey.800',
-                        '&:hover': {
-                          bgcolor: 'text.primary',
-                        },
+                          theme.palette.mode === 'light' ? 'common.white' : 'grey.300',
                       }}
                     >
                       Get Source Code - Rs 99

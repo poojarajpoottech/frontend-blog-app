@@ -70,8 +70,9 @@ export default function AboutTeam() {
             color: 'text.secondary',
           }}
         >
-          DesignWithSatya will provide you support if you have any problems, our support team will
-          reply within a day and we also have detailed documentation.
+          DesignWithSatya provides support for any problems you encounter. Our dedicated support
+          team will respond within one business day, and we also offer detailed documentation to
+          help you resolve issues on your own.
         </Typography>
       </m.div>
 

@@ -10,7 +10,7 @@ export default function AboutVision() {
     <Container component={MotionViewport} sx={{ mt: 5 }}>
       <m.div variants={varFade().inUp}>
         <Typography variant="h3" sx={{ textAlign: 'center', maxWidth: 800, mx: 'auto' }}>
-          My vision offering the best Responsive Website or UI/UX design.
+          &quot;My vision includes providing the best tutorials and technology&quot;
         </Typography>
       </m.div>
     </Container>

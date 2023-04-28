@@ -86,12 +86,12 @@ export default function AboutWhat() {
                   color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                 }}
               >
-                Website is all about creativity and innovative work in the field of Technology. We
-                provide web development courses videos, MCS important videos and technology videos
-                and articles. You will get all of my youtube videos source code and you are free to
-                use it and make changes. Please give us your valuable feedback and suggestions. We
-                appreciate your opinions and will use it to evaluate changes and make improvements
-                on our blog.
+                Our website is dedicated to promoting creativity and innovation in the field of
+                technology. We offer a wide range of resources, including web development courses,
+                important MCS videos, technology videos, and articles. All of our YouTube video
+                source code is available for free use and modification. We welcome your valuable
+                feedback and suggestions, which we will use to evaluate and improve our blog. Thank
+                you for helping us to make our website the best it can be!
               </Typography>
             </m.div>
 

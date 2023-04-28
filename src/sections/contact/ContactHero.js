@@ -15,12 +15,12 @@ const CONTACTS = [
   },
   {
     country: 'India',
-    address: 'Banda Uttar Pradesh ,210001',
+    address: 'Gram GadhiChandpur Post-AjeetPur, Banda Uttar Pradesh ,210001',
     phoneNumber: '(91) 7869351845',
   },
   {
-    country: 'In',
-    address: 'Slick Board Bangalore,560068',
+    country: 'Indian',
+    address: '#4 3rd Main Road 3rd Cross NGR Layout Bangalore,560068',
     phoneNumber: '(91) 7880386280',
   },
 ];

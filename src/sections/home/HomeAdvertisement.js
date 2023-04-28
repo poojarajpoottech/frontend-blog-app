@@ -1,7 +1,7 @@
 import { m } from 'framer-motion';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Button, Box, Container, Stack } from '@mui/material';
+import { Button, Box, Container, Stack, Typography } from '@mui/material';
 // utils
 import { bgGradient } from '../../utils/cssStyles';
 
@@ -19,6 +19,7 @@ export default function HomeAdvertisement() {
     <Container sx={{ mb: 5 }} component={MotionViewport}>
       <Stack
         alignItems="center"
+        justifyContent="space-around"
         direction={{ xs: 'column', md: 'row' }}
         sx={{
           ...bgGradient({
@@ -52,12 +53,20 @@ function Description() {
       <Box
         component={m.div}
         variants={varFade().inDown}
-        sx={{ color: 'common.white', mb: 5, typography: 'h2' }}
+        sx={{ color: 'common.white', mb: 2, typography: 'h2' }}
       >
-        Get started with
-        <br /> Designwithsatya today
+        Advertise With Us
       </Box>
-
+      <Box
+        component={m.div}
+        variants={varFade().inDown}
+        sx={{ color: 'common.white', mb: 2, typography: 'body5' }}
+      >
+        Thank you for your interest in advertising with us!
+      </Box>
+      <Typography variant="body2" sx={{ color: 'common.white', mb: 2 }}>
+        For more information, please contact us at:
+      </Typography>
       <Stack
         direction={{ xs: 'column', md: 'row' }}
         justifyContent={{ xs: 'center', md: 'flex-start' }}
@@ -68,15 +77,14 @@ function Description() {
             color="inherit"
             size="large"
             variant="contained"
-            target="_blank"
             rel="noopener"
-            href=""
+            href="/contact-us"
             sx={{
               color: 'grey.800',
               bgcolor: 'common.white',
             }}
           >
-            Download Now
+            Contact Us
           </Button>
         </m.div>
 
@@ -85,9 +93,8 @@ function Description() {
             color="inherit"
             size="large"
             variant="outlined"
-            target="_blank"
             rel="noopener"
-            href=""
+            href="/contact-us"
             endIcon={<Iconify icon="eva:external-link-fill" width={16} sx={{ mr: 0.5 }} />}
             sx={{ color: 'common.white', '&:hover': { borderColor: 'currentColor' } }}
           >
@@ -114,7 +121,7 @@ function Content() {
           visibleByDefault
           disabledEffect
           alt="rocket"
-          src="/assets/images/home/rocket.png"
+          src="/assets/images/home/advertising.png"
           sx={{ maxWidth: 460 }}
         />
       </m.div>

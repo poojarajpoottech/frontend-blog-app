@@ -24,6 +24,19 @@ export const _skills = [...Array(3)].map((_, index) => ({
 
 // ----------------------------------------------------------------------
 
+export const _mapContact = [
+  {
+    latlng: [33, 65],
+    address: _mock.address.fullAddress(1),
+    phoneNumber: _mock.phoneNumber(1),
+  },
+  {
+    latlng: [-12.5, 18.5],
+    address: _mock.address.fullAddress(2),
+    phoneNumber: _mock.phoneNumber(2),
+  },
+];
+
 export const _socials = [
   {
     value: 'facebook',

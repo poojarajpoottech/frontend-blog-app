@@ -4,7 +4,8 @@ import { useState } from 'react';
 // @mui
 import { useTheme, styled } from '@mui/material/styles';
 import { Typography } from '@mui/material';
-
+// config
+import { MAP_API } from '../../config-global';
 // components
 import Iconify from '../../components/iconify';
 import { MapControl, MapMarker, MapPopup } from '../../components/map';
@@ -39,11 +40,12 @@ export default function ContactMap({ contacts }) {
     <StyledRoot>
       <Map
         initialViewState={{
-          latitude: 12,
-          longitude: 42,
-          zoom: 2,
+          latitude: 20.5937,
+          longitude: 78.9629,
+          zoom: 5,
         }}
         mapStyle={`mapbox://styles/mapbox/${isLight ? 'light' : 'dark'}-v10`}
+        mapboxAccessToken={MAP_API}
       >
         <MapControl hideGeolocateControl />
 

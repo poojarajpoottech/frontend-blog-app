@@ -19,7 +19,6 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <link rel="manifest" href="/manifest.json" />
 
-          {/* PWA primary color */}
           <meta name="theme-color" content={palette('light').primary.main} />
 
           {/* Favicon */}
@@ -32,12 +31,26 @@ export default class MyDocument extends Document {
           {this.props.emotionStyleTags}
 
           {/* Meta */}
-          <meta name="description" content="The Design With Satya" />
+          <meta
+            name="description"
+            content="Welcome to designwithsatya, a blog dedicated to all things technical and web development. Whether you're a seasoned pro or just starting out, our expert insights and tips will help you stay on top of the latest industry trends and advance your skills"
+          />
+          <meta
+            name="description"
+            content="Interested in learning the ins and outs of web development? Look no further than designwithsatya, where we cover everything from programming languages to server architecture to help you become a more well-rounded and versatile developer."
+          />
           <meta
             name="keywords"
-            content="react,material,satyendra,ui developer,figma,website,top website"
+            content="User Experience (UX) Design,User Interface (UI) Design,Graphic Design,Web Design,Mobile App Design,Design Thinking,Design Tools,Design Trends,Design Inspiration,Product Design,"
           />
-          <meta name="author" content="Satyendra Singh" />
+          <meta
+            name="keywords"
+            content="Programming languagesWeb development,Mobile app development,Cybersecurity,Artificial intelligence,Cloud computing,Data analytics,Internet of Things (IoT),Machine learning,DevOps"
+          />
+          <meta
+            name="keywords"
+            content="Design with Satya's Top 10 UX Design Trends for 2023,Maximizing Mobile App Design with Design with Satya,Design Thinking 101: A Guide from Design with SatyaDesign with Satya's Ultimate Guide to Graphic Design PrinciplesWeb Design Best Practices: Tips from Design with Satya"
+          />
         </Head>
 
         <body>

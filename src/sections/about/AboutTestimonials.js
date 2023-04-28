@@ -104,9 +104,11 @@ export default function AboutTestimonials() {
 
               <m.div variants={varFade().inUp}>
                 <Typography sx={{ color: 'common.white' }}>
-                  My goal is to create a product and service that you’re satisfied with and use it
-                  every day. This is why I am constantly working on our services to make it better
-                  every day and really listen to what our users has to say.
+                  &quot;My goal is to create a product and service that not only meets, but exceeds
+                  your expectations, and becomes a valuable part of your daily routine. That&apos;s
+                  why I am dedicated to constantly improving our services and listening carefully to
+                  feedback from our users. By collaborating with you and incorporating your ideas,
+                  we can create the best possible experience for all of our customers.&quot;
                 </Typography>
               </m.div>
 

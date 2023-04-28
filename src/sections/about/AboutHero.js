@@ -59,15 +59,15 @@ export default function AboutHero() {
                 fontWeight: 'fontWeightMedium',
               }}
             >
-              My name is Satyendra Singh. I m 24 years old. I born in Banda, Uttar Pradesh.
-              Currently, I am living in Bengalore, India. I live with my wife. And my family lives
-              in Native only. I am a Senior Full Stack FrontEnd Developer with over 3+ years of
-              extensive experience developing web, desktop applications, and utilities for huge
-              enterprises and startups or product based company. Have experience with e-commerce, HR
-              portal,psbusyari, insurance and domains. While working on these projects, I have
-              learned how to identify and efficiently solve business needs, how to create high
-              performant, scalable, and maintainable solutions of any difficulty, and how to
-              collaborate with my team members to drive towards our common goals together as a team.
+              &quot;My name is Satyendra Singh, and I am 24 years old. I was born in Banda, Uttar
+              Pradesh, and I currently live in Bengaluru, India with my wife. My family still lives
+              in our native place. I am a Senior Full Stack FrontEnd Developer with over 3 years of
+              extensive experience in developing web, desktop applications, and utilities for both
+              huge enterprises and startups. I have experience in domains like e-commerce, HR
+              portals, busyari, and insurance. While working on these projects, I have learned how
+              to identify and efficiently solve business needs, create high-performing, scalable,
+              and maintainable solutions of any difficulty, and collaborate with my team members to
+              achieve our common goals together.&quot;
             </Typography>
           </m.div>
         </StyledContent>

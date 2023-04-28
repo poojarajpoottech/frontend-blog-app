@@ -4,6 +4,8 @@ module.exports = {
   env: {
     HOST_API_KEY: 'https://api-dev-designwithsatya-v4.vercel.app',
     VERCEL_ACCESS_TOKEN: 'bXPDIByordMqzBAZYMrw3zF9',
+    MAPBOX_API:
+      'pk.eyJ1IjoiZGVzaWdud2l0aHNhdHlhIiwiYSI6ImNsZ3picXoydzBpMGUzY2p1ZXBvb21xdmwifQ.-2u3ZkPavD9YngmnfHVklw',
     NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY:
       'pk_test_51MxXW7SGx9AfqHnkFkiRN4R2e0ltw6ZM8SZMOxXGh3iybqPlF202GyKVN6rHkIkdT7tRb7RSCZ4x17RlbkjN066A00aBneYsv1',
     STRIPE_SECRET_KEY:

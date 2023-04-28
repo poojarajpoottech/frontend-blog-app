@@ -155,9 +155,9 @@ function Description() {
         </StyledGradientText>
       </m.div>
       <m.div variants={varFade().in}>
-        <Typography variant="h6" sx={{ textAlign: 'center', color: 'grey.500' }}>
-          Learn the latest digital skills for tomorrow jobs The fastest, most effective youtube
-          video to get future-ready.
+        <Typography variant="h6" sx={{ textAlign: 'center', color: 'grey.500', maxWidth: '800px' }}>
+          &quot;Stay ahead of the curve by learning in-demand digital skills for future job
+          opportunities with the fastest and most effective YouTube video.&quot;
         </Typography>
       </m.div>
       <m.div variants={varFade().in}>
@@ -175,7 +175,7 @@ function Description() {
       </m.div>
       <Stack spacing={1.5} direction={{ xs: 'row', sm: 'row' }} sx={{ mb: 5 }}>
         <Typography variant="h6" sx={{ color: '#00AB55' }}>
-          A Website For
+          This Website is For
         </Typography>
         <Typography variant="h6" sx={{ color: 'grey.300' }}>
           <Typewriter
