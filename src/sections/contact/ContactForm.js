@@ -7,6 +7,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 import { Typography, Stack, Alert } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
+import Cookies from 'js-cookie';
 
 // components
 import axios from 'axios';
@@ -21,9 +22,10 @@ const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 export default function ContactForm() {
-  // const [token, setToken] = useState(null);
+  const mycookie = Cookies.get('mycookie');
+  console.log(mycookie);
 
-  // const [userData, setUserData] = useState(null);
+  const [userData, setUserData] = useState(null);
   const { enqueueSnackbar } = useSnackbar();
 
   const RegisterSchema = Yup.object().shape({
@@ -78,48 +80,50 @@ export default function ContactForm() {
     }
   };
   // Get Token From backend
+  const token =
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiYTM3MDEzNjk0MzAwMDg2NGI3OTgiLCJpYXQiOjE2ODI2NzkyOTl9.HRX4SnwNreWIk_YW7Phirg9iOCsJHe1ZZEiKtugomi4';
 
-  const getToken = async () => {
-    try {
-      const response = await axios.get(`${process.env.HOST_API_KEY}/api/gettoken`, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      const token = await response.data.token;
-      console.log(token);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    getToken();
-  }, []);
-
-  // const getData = async () => {
+  // const getToken = async () => {
   //   try {
-  //     const response = await axios.get(`${process.env.HOST_API_KEY}/api/getdata`, {
+  //     const response = await axios.get(`${process.env.HOST_API_KEY}/api/gettoken`, {
   //       headers: {
+
   //         'Content-Type': 'application/json',
   //       },
-  //       credentials: 'include',
+
   //     });
-  //     const resultdata = response.data;
-  //     setUserData(resultdata);
-  //     console.log(resultdata);
-  //     if (resultdata.status !== 200) {
-  //       const error = new Error(resultdata.error);
-  //       throw error;
-  //     }
+  //     const result = await response;
+  //     console.log(result.data.token);
   //   } catch (error) {
   //     console.log(error);
   //   }
   // };
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    try {
+      const response = await axios.get(`${process.env.HOST_API_KEY}/api/getdata`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+      });
+      const resultdata = response.data;
+      setUserData(resultdata);
+      console.log(resultdata);
+      if (resultdata.status !== 200) {
+        const error = new Error(resultdata.error);
+        throw error;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  console.log(userData);
 
   return (
     <Stack component={MotionViewport} spacing={5}>
