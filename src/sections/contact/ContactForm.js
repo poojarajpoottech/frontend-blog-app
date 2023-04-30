@@ -80,8 +80,6 @@ export default function ContactForm() {
     }
   };
   // Get Token From backend
-  const token =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDRiYTM3MDEzNjk0MzAwMDg2NGI3OTgiLCJpYXQiOjE2ODI2NzkyOTl9.HRX4SnwNreWIk_YW7Phirg9iOCsJHe1ZZEiKtugomi4';
 
   // const getToken = async () => {
   //   try {
@@ -107,7 +105,7 @@ export default function ContactForm() {
     try {
       const response = await axios.get(`${process.env.HOST_API_KEY}/api/getdata`, {
         headers: {
-          Authorization: `Bearer ${token}`,
+          // Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
         credentials: 'include',
