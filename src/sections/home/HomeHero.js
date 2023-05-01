@@ -24,7 +24,7 @@ import { MotionContainer, varFade } from '../../components/animate';
 
 const StyledRoot = styled('div')(({ theme }) => ({
   position: 'relative',
-  background: `url('/assets/background/banner_5.jpg')`,
+  background: `url('/assets/background/portfolio_banner.webp')`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
