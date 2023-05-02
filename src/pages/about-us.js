@@ -5,7 +5,14 @@ import { Divider } from '@mui/material';
 // layouts
 import MainLayout from '../layouts/main';
 // sections
-import { AboutHero, AboutWhat, AboutTeam, AboutVision, AboutTestimonials } from '../sections/about';
+import {
+  AboutHero,
+  AboutWhat,
+  AboutTeam,
+  AboutVision,
+  AboutTestimonials,
+  AboutMe,
+} from '../sections/about';
 
 // ----------------------------------------------------------------------
 
@@ -21,7 +28,7 @@ export default function AboutPage() {
       </Head>
 
       <AboutHero />
-
+      <AboutMe />
       <AboutWhat />
 
       <AboutVision />

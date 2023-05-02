@@ -57,6 +57,11 @@ const navConfig = [
       },
     ],
   },
+  {
+    title: 'Help',
+    icon: <Iconify icon="mdi:information" />,
+    path: PATH_PAGE.help,
+  },
 ];
 
 export default navConfig;

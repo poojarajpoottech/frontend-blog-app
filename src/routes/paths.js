@@ -14,6 +14,7 @@ export const PATH_PAGE = {
   contact: '/contact-us',
   posts: '/blog/posts',
   faqs: '/faqs',
+  help: '/help-us',
   page403: '/403',
   page404: '/404',
   page500: '/500',

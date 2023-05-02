@@ -15,6 +15,7 @@ import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../../sections/blo
 import axios from '../../utils/axios';
 
 import { AppFeatured } from '../../sections/home';
+import UserProfilePage from './profile';
 
 const SORT_OPTIONS = [
   { value: 'latest', label: 'Latest' },
@@ -80,6 +81,7 @@ export default function BlogPostsPage() {
         <title> Blog: Posts | designwithsatya</title>
       </Head>
       <Container maxWidth={themeStretch ? false : 'lg'}>
+        <UserProfilePage />
         <AppFeatured list={_appFeatured} />
         <CustomBreadcrumbs
           heading="Blog Tutorial"
