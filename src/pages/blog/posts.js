@@ -2,7 +2,7 @@ import orderBy from 'lodash/orderBy';
 import React, { useState, useCallback, useEffect } from 'react';
 import Head from 'next/head';
 import NextLink from 'next/link';
-import { Button, Grid, Container, Stack } from '@mui/material';
+import { Button, Grid, Container, Stack, Pagination } from '@mui/material';
 
 import CustomBreadcrumbs from '../../components/custom-breadcrumbs';
 import { SkeletonPostItem } from '../../components/skeleton';
@@ -81,8 +81,8 @@ export default function BlogPostsPage() {
         <title> Blog: Posts | designwithsatya</title>
       </Head>
       <Container maxWidth={themeStretch ? false : 'lg'}>
-        <UserProfilePage />
         <AppFeatured list={_appFeatured} />
+        <UserProfilePage />
         <CustomBreadcrumbs
           heading="Blog Tutorial"
           links={[
@@ -109,11 +109,13 @@ export default function BlogPostsPage() {
             </Button>
           }
         />
+
         <Stack mb={5} direction="row" alignItems="center" justifyContent="space-between">
           <BlogPostsSearch />
           <BlogPostsSort sortBy={sortBy} sortOptions={SORT_OPTIONS} onSort={handleChangeSortBy} />
         </Stack>
-        <Grid container spacing={3} mb={20}>
+
+        <Grid container spacing={3}>
           {(!posts.length ? [...Array(12)] : sortedPosts).map((post, index) =>
             post ? (
               <Grid key={index} item xs={12} sm={6} md={6} lg={6}>
@@ -124,6 +126,16 @@ export default function BlogPostsPage() {
             )
           )}
         </Grid>
+        <Stack>
+          <Pagination
+            count={posts.length}
+            sx={{
+              my: 5,
+              ml: 0,
+              mr: { xs: 'auto', md: 0 },
+            }}
+          />
+        </Stack>
       </Container>
     </>
   );

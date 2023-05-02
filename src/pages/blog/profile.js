@@ -2,7 +2,7 @@ import { useState } from 'react';
 // next
 import Head from 'next/head';
 // @mui
-import { Tab, Card, Tabs, Container, Box } from '@mui/material';
+import { Tab, Tabs, Box } from '@mui/material';
 // routes
 // import { PATH_DASHBOARD } from '../../routes/paths';
 
@@ -10,36 +10,83 @@ import { Tab, Card, Tabs, Container, Box } from '@mui/material';
 import MainLayout from '../../layouts/main';
 // components
 import Iconify from '../../components/iconify';
-import { useSettingsContext } from '../../components/settings';
 
 UserProfilePage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 // ----------------------------------------------------------------------
 
 export default function UserProfilePage() {
-  const { themeStretch } = useSettingsContext();
-
   const [currentTab, setCurrentTab] = useState('profile');
 
   const TABS = [
     {
-      value: 'profile',
-      label: 'Profile',
+      value: 'React JS',
+      label: 'React',
       icon: <Iconify icon="ic:round-account-box" />,
     },
     {
-      value: 'followers',
-      label: 'Followers',
+      value: 'JavaScript',
+      label: 'JavaScript',
       icon: <Iconify icon="eva:heart-fill" />,
     },
     {
-      value: 'friends',
-      label: 'Friends',
+      value: 'Next',
+      label: 'Next',
       icon: <Iconify icon="eva:people-fill" />,
     },
     {
-      value: 'gallery',
-      label: 'Gallery',
+      value: 'Node',
+      label: 'Node JS',
+      icon: <Iconify icon="ic:round-perm-media" />,
+    },
+    {
+      value: 'HTML5',
+      label: 'HTML5',
+      icon: <Iconify icon="ic:round-account-box" />,
+    },
+    {
+      value: 'CSS3',
+      label: 'CSS3',
+      icon: <Iconify icon="eva:heart-fill" />,
+    },
+    {
+      value: 'GITHUB',
+      label: 'GITHUB',
+      icon: <Iconify icon="eva:people-fill" />,
+    },
+    {
+      value: 'TypeScript',
+      label: 'TypeScript',
+      icon: <Iconify icon="ic:round-perm-media" />,
+    },
+    {
+      value: 'Material UI',
+      label: 'Material UI',
+      icon: <Iconify icon="eva:people-fill" />,
+    },
+    {
+      value: 'Angular',
+      label: 'Angular',
+      icon: <Iconify icon="ic:round-perm-media" />,
+    },
+    {
+      value: 'Gitlab',
+      label: 'Gitlab',
+      icon: <Iconify icon="eva:people-fill" />,
+    },
+    {
+      value: 'Latest',
+      label: 'Latest',
+      icon: <Iconify icon="ic:round-perm-media" />,
+    },
+    {
+      value: 'Motivation',
+      label: 'Motivation',
+      icon: <Iconify icon="eva:people-fill" />,
+    },
+    {
+      value: 'Technical',
+      label: 'Technical',
       icon: <Iconify icon="ic:round-perm-media" />,
     },
   ];
@@ -50,42 +97,30 @@ export default function UserProfilePage() {
         <title> User: Profile | Minimal UI</title>
       </Head>
 
-      <Container maxWidth={themeStretch ? false : 'lg'}>
-        <Card
-          sx={{
-            mb: 3,
-            height: 280,
-            position: 'relative',
-          }}
-        >
-          <Tabs
-            value={currentTab}
-            onChange={(event, newValue) => setCurrentTab(newValue)}
-            sx={{
-              width: 1,
-              bottom: 0,
-              zIndex: 9,
-              position: 'absolute',
-              bgcolor: 'background.paper',
-              '& .MuiTabs-flexContainer': {
-                pr: { md: 3 },
-                justifyContent: {
-                  sm: 'center',
-                  md: 'flex-end',
-                },
-              },
-            }}
-          >
-            {TABS.map((tab) => (
-              <Tab key={tab.value} value={tab.value} icon={tab.icon} label={tab.label} />
-            ))}
-          </Tabs>
-        </Card>
+      <Tabs
+        value={currentTab}
+        onChange={(event, newValue) => setCurrentTab(newValue)}
+        sx={{
+          width: 1,
+          bottom: 0,
+          zIndex: 9,
+          mb: 2,
+          bgcolor: 'background.paper',
+          '& .MuiTabs-flexContainer': {
+            pr: { md: 3 },
+            justifyContent: {
+              sm: 'center',
+              md: 'center',
+            },
+          },
+        }}
+      >
+        {TABS.map((tab) => (
+          <Tab key={tab.value} value={tab.value} icon={tab.icon} label={tab.label} />
+        ))}
+      </Tabs>
 
-        {TABS.map(
-          (tab) => tab.value === currentTab && <Box key={tab.value}> {tab.component} </Box>
-        )}
-      </Container>
+      {TABS.map((tab) => tab.value === currentTab && <Box key={tab.value}> {tab.component} </Box>)}
     </>
   );
 }
