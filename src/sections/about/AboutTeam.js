@@ -66,13 +66,15 @@ export default function AboutTeam() {
         <Typography
           sx={{
             mx: 'auto',
-            maxWidth: 640,
+            maxWidth: 800,
             color: 'text.secondary',
           }}
         >
-          DesignWithSatya provides support for any problems you encounter. Our dedicated support
-          team will respond within one business day, and we also offer detailed documentation to
-          help you resolve issues on your own.
+          "At DesignWithSatya, we understand that web development can sometimes be challenging, and
+          that's why we're committed to providing world-class support for all of our readers. If you
+          encounter any problems or have questions about our tutorials or technology, our dedicated
+          support team is here to help. We strive to respond to all inquiries within one business
+          day, so you can get the help you need when you need it!"
         </Typography>
       </m.div>
 

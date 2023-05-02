@@ -105,9 +105,12 @@ export default function HomeMinimal() {
           </m.div>
           <m.div variants={varFade().inUp}>
             <Typography variant="subtitle1">
-              We are a full stack design and development studio crafting end-to-end digital
-              solutions including research, ui ux design, front-end, back-end & mobile app
-              development services.
+              Are you looking to improve your web development skills and stay up-to-date on the
+              latest trends? Our web development blog is here to help! Our team of full-stack
+              developers, designers, and researchers shares insights and tips on a wide range of
+              topics, from front-end development with HTML, CSS, and JavaScript, to back-end
+              development with Node.js and beyond. Join us on our journey to explore the exciting
+              world of web development and take your skills to the next level.
             </Typography>
           </m.div>
         </Stack>

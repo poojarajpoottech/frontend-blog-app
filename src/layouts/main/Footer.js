@@ -75,8 +75,9 @@ export default function Footer() {
 
           <Grid item xs={8} md={3}>
             <Typography variant="body2" sx={{ pr: { md: 5 } }}>
-              We specialize in developing websites and mobile applications, providing SEO
-              maintenance services, and catering to both startups and large enterprises.
+              Welcome to our web development blog! Our blog is dedicated to sharing insights and
+              tips on a wide range of topics, from front-end development with HTML, CSS, and
+              JavaScript, to back-end development with Node.js, to mobile app development and more.
             </Typography>
 
             <Stack
@@ -149,7 +150,7 @@ export default function Footer() {
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
-          © 2023. All rights reserved by designwithsatya
+          Copyright © 2023 DesignWithSatya. All Rights Reserved.
         </Typography>
       </Container>
     </Box>
