@@ -109,7 +109,15 @@ export default function ContactForm() {
 
   const getData = async (token) => {
     try {
-      const response = await axios.get(`${process.env.HOST_API_KEY}/api/getdata`);
+      const response = await axios.get(`${process.env.HOST_API_KEY}/api/getdata`, {
+        withCredentials: true,
+        crossDomain: true,
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+          'Access-Control-Allow-Origin': 'https://designwithsatya.vercel.app',
+        },
+      });
       const resultdata = response.data;
       setUserData(resultdata);
       console.log(resultdata);
