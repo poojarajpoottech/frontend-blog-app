@@ -109,12 +109,7 @@ export default function ContactForm() {
 
   const getData = async (token) => {
     try {
-      const response = await axios.get(`${process.env.HOST_API_KEY}/api/getdata`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        },
-      });
+      const response = await axios.get(`${process.env.HOST_API_KEY}/api/getdata`);
       const resultdata = response.data;
       setUserData(resultdata);
       console.log(resultdata);
