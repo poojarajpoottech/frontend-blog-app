@@ -108,7 +108,6 @@ export default function ContactForm() {
           // Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
-        credentials: 'include',
       });
       const resultdata = response.data;
       setUserData(resultdata);
