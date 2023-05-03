@@ -7,23 +7,24 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 import { Typography, Stack, Alert } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
-import Cookies from 'js-cookie';
 
 // components
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
 import { MotionViewport, varFade } from '../../components/animate';
 import FormProvider, { RHFTextField } from '../../components/hook-form';
 import { useSnackbar } from '../../components/snackbar';
 
 // ----------------------------------------------------------------------
 
+const token = Cookies.get('jwtToken');
+console.log(`my token`, token);
+
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 export default function ContactForm() {
-  const [jwtToken, setJwtToken] = useState('');
-
   const [userData, setUserData] = useState(null);
   const { enqueueSnackbar } = useSnackbar();
 
@@ -96,31 +97,26 @@ export default function ContactForm() {
   //   }
   // };
   useEffect(() => {
-    const token = Cookies.get('jwtToken');
-    if (token) {
-      setJwtToken(token);
-      getData(token);
-    } else {
-      console.log('I am not getting any token');
-    }
-  }, []);
+    getData();
+  });
 
-  console.log(jwtToken);
-
-  const getData = async (token) => {
+  const getData = async () => {
     try {
       const response = await axios.get(`${process.env.HOST_API_KEY}/api/getdata`, {
         withCredentials: true,
         crossDomain: true,
         headers: {
+          Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
           Accept: 'application/json',
-          'Access-Control-Allow-Origin': 'https://designwithsatya.vercel.app',
+          'Access-Control-Allow-Origin': [
+            'https://designwithsatya.vercel.app',
+            'http://localhost:3031',
+          ],
         },
       });
-      const resultdata = response.data;
+      const resultdata = await response.data;
       setUserData(resultdata);
-      console.log(resultdata);
       if (resultdata.status !== 200) {
         const error = new Error(resultdata.error);
         throw error;
