@@ -22,8 +22,7 @@ const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 export default function ContactForm() {
-  const mycookie = Cookies.get('mycookie');
-  console.log(mycookie);
+  const [jwtToken, setJwtToken] = useState('');
 
   const [userData, setUserData] = useState(null);
   const { enqueueSnackbar } = useSnackbar();
@@ -96,16 +95,23 @@ export default function ContactForm() {
   //     console.log(error);
   //   }
   // };
-
   useEffect(() => {
-    getData();
+    const token = Cookies.get('jwtToken');
+    if (token) {
+      setJwtToken(token);
+      getData(token);
+    } else {
+      console.log('I am not getting any token');
+    }
   }, []);
 
-  const getData = async () => {
+  console.log(jwtToken);
+
+  const getData = async (token) => {
     try {
       const response = await axios.get(`${process.env.HOST_API_KEY}/api/getdata`, {
         headers: {
-          // Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
       });
