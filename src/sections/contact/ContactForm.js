@@ -92,23 +92,6 @@ export default function ContactForm() {
       });
     }
   };
-  // Get Token From backend
-
-  // const getToken = async () => {
-  //   try {
-  //     const response = await axios.get(`${process.env.HOST_API_KEY}/api/gettoken`, {
-  //       headers: {
-
-  //         'Content-Type': 'application/json',
-  //       },
-
-  //     });
-  //     const result = await response;
-  //     console.log(result.data.token);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
   useEffect(() => {
     getData();
   }, []);
