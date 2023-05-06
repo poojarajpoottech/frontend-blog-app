@@ -19,8 +19,6 @@ import { useSnackbar } from '../../components/snackbar';
 
 const token =
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDQ3NzJkOGYzMzVkMTU3NzQ2YzI5NjEiLCJpYXQiOjE2ODMyODAzOTB9._y7blvuD0nneXBOUUMOwtsCCOcplLzPHF6O0mNO3sjA';
-const Restoken = localStorage.getItem('token');
-console.log(Restoken);
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
