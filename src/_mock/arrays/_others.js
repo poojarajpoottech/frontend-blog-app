@@ -8,7 +8,7 @@ export const _carouselsMembers = [...Array(6)].map((_, index) => ({
   avatar: `/assets/images/portraits/portraits_${index + 1}.jpg`,
 }));
 
-export const _faqs = [...Array(8)].map((_, index) => ({
+export const _faqs = [...Array(10)].map((_, index) => ({
   id: _mock.id(index),
   value: `panel${index + 1}`,
   heading: _mock.text.title(index),

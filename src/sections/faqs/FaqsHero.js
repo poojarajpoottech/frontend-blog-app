@@ -39,7 +39,6 @@ export default function FaqsHero() {
           <div>
             <TextAnimate text="How" sx={{ color: 'primary.main' }} variants={varFade().inRight} />
             <br />
-
             <Stack spacing={2} display="inline-flex" direction="row" sx={{ color: 'common.white' }}>
               <TextAnimate text="can" />
               <TextAnimate text="we" />

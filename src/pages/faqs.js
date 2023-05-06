@@ -24,7 +24,7 @@ export default function FaqsPage() {
 
       <Container sx={{ pt: 15, pb: 10, position: 'relative' }}>
         <Typography variant="h3" sx={{ mb: 5 }}>
-          Frequently asked questions
+          Frequently asked questions?
         </Typography>
 
         <Box

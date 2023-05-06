@@ -17,6 +17,7 @@ import { secondaryFont } from '../../theme/typography';
 import { _socials } from '../../_mock/arrays';
 
 // components
+import SvgColor from '../../components/svg-color';
 import Iconify from '../../components/iconify';
 import { MotionContainer, varFade } from '../../components/animate';
 
@@ -158,9 +159,6 @@ function Description() {
         <Typography variant="h6" sx={{ textAlign: 'center', color: 'grey.500', maxWidth: '800px' }}>
           &quot;Innovative Web Development Services to Help You Stand Out in the Crowd.&quot;
         </Typography>
-        <Typography variant="h6" sx={{ textAlign: 'center', color: 'grey.500', maxWidth: '800px' }}>
-          &quot;Leading Your Online Presence with Expert Web Development Services.&quot;
-        </Typography>
       </m.div>
       <m.div variants={varFade().in}>
         <StyledGradientText
@@ -211,6 +209,15 @@ function Description() {
           </IconButton>
         ))}
       </Stack>
+      <Box style={{ position: 'fixed', bottom: 5, left: 0, padding: '10px' }}>
+        <Stack sx={{ color: 'grey.500', textAlign: 'center' }} spacing={2} direction="row">
+          {['js', 'ts', 'nextjs', 'node', 'figma'].map((platform) => (
+            <m.div key={platform} variants={varFade().in}>
+              <SvgColor src={`/assets/icons/platforms/ic_${platform}.svg`} />
+            </m.div>
+          ))}
+        </Stack>
+      </Box>
     </StyledDescription>
   );
 }
