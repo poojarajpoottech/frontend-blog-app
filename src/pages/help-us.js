@@ -38,36 +38,24 @@ export default function HelpUsPage() {
         </m.div>
         <Box sx={{ mb: 5, mt: 5 }}>
           <Typography variant="subtitle2">
-            With a heavy heart, I must ask for your help once again. You have always been there for
-            me, and now I need your unwavering support and love more than ever before. Regrettably,
-            I must ask for a small amount of money as I embark on a new journey after leaving my
-            job. Without your generosity and encouragement, I fear that my dreams may not come to
-            fruition. Please know that I am eternally grateful for your kindness and love.
+            However, in order to continue creating high-quality content, I am in need of some
+            financial assistance. I am hoping to raise a small amount of money, around 50 rupees, to
+            cover the costs of video editing software and other equipment necessary to produce these
+            tutorials.
           </Typography>
-          <Typography variant="subtitle2" sx={{ mb: 2, mt: 2 }}>
+          <Typography variant="subtitle2" sx={{ mb: 2 }}>
+            If you are able and willing to contribute, any amount would be greatly appreciated. Not
+            only would your support help me continue creating these tutorials, but it would also
+            benefit others who are looking to improve their skills in web development.
+          </Typography>
+          <Typography variant="subtitle2" sx={{ mb: 2 }}>
+            To continue producing high-quality content, I need some financial assistance to cover
+            the costs of video editing software and other equipment necessary for producing these
+            tutorials. That's why I'm asking for your support. Even a small contribution of
             <span style={{ color: theme.palette.mode === 'light' ? 'purple' : 'red' }}>
-              So I am collecting only 50Rs for this project Source Code
+              50 rupees would go a long way in helping me
             </span>
-            . I hope you all understand my feeling and my situation.
-          </Typography>
-          <Typography variant="subtitle2" sx={{ mb: 2 }}>
-            Here is my PAYTM, GOOGLE PAY, PHONE PAY Number 7869351845. You have to pay 50Rs on this
-            Number. Thanks in advance.
-          </Typography>
-          <Typography variant="subtitle2" sx={{ mb: 2 }}>
-            Uper diya gaya number 7869351845 me PAYTM, GOOGLE PAY, PHONE PAY tino me koi ek online
-            payment aap kar sakte ho. Only 50RS pay krna hai. Ek bar hone ke baad screenshot muje
-            <span style={{ color: theme.palette.mode === 'light' ? 'purple' : 'red' }}>
-              WhatsApp me HERE
-            </span>{' '}
-            same number par kr dijiyega. Me apko source code share kr doonga. Dhanyawad.
-          </Typography>
-          <Typography variant="subtitle2" sx={{ mb: 2 }}>
-            **Those who Pay
-            <span style={{ color: theme.palette.mode === 'light' ? 'purple' : 'red' }}>
-              WhatsApp me HERE
-            </span>
-            with a screenshot of payment. And, only those will get the source code**
+            50 rupees would go a long way in helping me continue creating these tutorials.{' '}
           </Typography>
           <Typography
             variant="h6"
@@ -96,9 +84,8 @@ export default function HelpUsPage() {
         </Box>
         <m.div variants={varFade().inUp}>
           <Typography variant="subtitle2" sx={{ textAlign: 'center', maxWidth: 800, mx: 'auto' }}>
-            I am trying to raise funds to help me get back on my feet. Every little bit counts and
-            would mean the world to me. I am grateful for any support you can offer, whether it's
-            through a donation, a kind word, or sharing this post with your network.
+            "Thank you, for considering my request. Please let me know if you have any questions or
+            concerns.
           </Typography>
         </m.div>
       </Container>

@@ -75,9 +75,9 @@ export default function Footer() {
 
           <Grid item xs={8} md={3}>
             <Typography variant="body2" sx={{ pr: { md: 5 } }}>
-              Welcome to our web development blog! Our blog is dedicated to sharing insights and
-              tips on a wide range of topics, from front-end development with HTML, CSS, and
-              JavaScript, to back-end development with Node.js, to mobile app development and more.
+              At Designwithsatya, we design and develop better websites that deliver results. Trust
+              us as your web development partner and achieve your online goals with our expertise in
+              creating user-friendly, functional websites.
             </Typography>
 
             <Stack

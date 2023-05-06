@@ -54,6 +54,8 @@ export default function AuthLoginForm() {
         password,
       });
       const result = await response;
+      const { token } = result.data;
+      localStorage.setItem('token', token);
 
       if (response.status === 400 || !result) {
         console.log('Login failed: invalid response data');

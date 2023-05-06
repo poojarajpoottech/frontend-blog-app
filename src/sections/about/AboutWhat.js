@@ -86,16 +86,15 @@ export default function AboutWhat() {
                   color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                 }}
               >
-                "Welcome to our web development blog! At DesignWithSatya, we're passionate about
-                promoting creativity and innovation in the world of technology. Our blog offers a
-                wide range of resources, including web development courses, informative videos on
-                topics like MCS and technology, and articles that explore the latest trends and
-                techniques in web development. Best of all, all of our YouTube video source code is
-                available for free use and modification, so you can learn and grow your skills with
-                ease. We value your feedback and suggestions, and we're always striving to improve
-                our blog and provide the best possible experience for our readers. Whether you're a
-                seasoned developer or just getting started, we hope you'll join us on our journey
-                and help us make our website the best it can be!"
+                "This website is for businesses and individuals who are looking for professional web
+                development services. As a web developer, I specialize in creating responsive,
+                user-friendly, and visually appealing websites that meet the needs of my clients.
+                Whether you need a simple website or a complex web application, I can help bring
+                your vision to life with the latest web development technologies and best practices.
+                I have experience working with a wide range of industries, from small businesses to
+                large corporations, and I am committed to delivering high-quality work that exceeds
+                your expectations. Let's work together to create a website that helps you achieve
+                your goals and grow your online presence."
               </Typography>
             </m.div>
 

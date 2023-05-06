@@ -1,35 +1,27 @@
 // ----------------------------------------------------------------------
 
 export const title = [
-  `How can you contact with me ?`,
-  `Which services do I provide ?`,
-  `Who I am ?`,
-  `Comming Soon`,
-  `Comming Soon`,
-  `Comming Soon`,
-  `Comming Soon`,
-  `Comming Soon`,
-];
-
-export const sentence = [
-  `Assumenda nam repudiandae rerum fugiat vel maxime.`,
-  `Quis veniam aut saepe aliquid nulla.`,
-  `Reprehenderit ut voluptas sapiente ratione nostrum est.`,
-  `Error ut sit vel molestias velit.`,
-  `Quo quia sit nihil nemo doloremque et.`,
-  `Autem doloribus harum vero laborum.`,
-  `Tempora officiis consequuntur architecto nostrum autem nam adipisci.`,
-  `Voluptas sunt magni adipisci praesentium saepe.`,
-  `Ea architecto quas voluptates voluptas earum illo est vel rem.`,
+  `What types of web development services do you offer?`,
+  `How long does it take to complete a web development project?`,
+  `What is your process for developing a website?`,
+  `Do you offer custom web design services?`,
+  `What platform or technology do you use for web development?`,
+  `How do you ensure that the website is responsive and mobile-friendly?`,
+  `Do you provide website maintenance and support services?`,
+  `Can you help with search engine optimization (SEO)?`,
+  `What is your pricing structure for web development services?`,
+  `How do I get started with a web development project with your company?`,
 ];
 
 export const description = [
-  `Email ID - designwithsatyendra@gmail.com 91+ 7869351845 Roopena Agrahara, Bengaluru, Karnataka 560068.`,
-  `Responsive web design, UI/UX ,Logo designing,React JS,Node JS,video editing,ecommerce website,user interface more much like etc.`,
-  `My name is Satyendra Singh. I m 24 years old. I born in Banda, Uttar Pradesh. Currently, I am living in Bengalore, India. I live with my wife. And my family lives in Native only.`,
-  `Pending.`,
-  `Pending.`,
-  `Pending.`,
-  `Pending.`,
-  `Pending.`,
+  `We offer a range of web development services including front-end development, back-end development, full-stack development, e-commerce development, content management systems (CMS) development, and more.`,
+  `The time it takes to complete a web development project varies depending on the complexity and scope of the project. We can provide you with a project timeline and estimated completion date during the consultation process.`,
+  `Our web development process involves several stages including discovery, planning, design, development, testing, and launch. We work closely with our clients throughout the process to ensure that their vision and goals are being met.`,
+  `Yes, we offer custom web design services tailored to the unique needs and preferences of our clients..`,
+  `We use a variety of platforms and technologies depending on the specific needs of the project. Some of the technologies we use include HTML, CSS, JavaScript, PHP, Node.js, and more.`,
+  `We design and develop all of our websites to be responsive and mobile-friendly, ensuring that they provide a great user experience across all devices..`,
+  `Yes, we provide website maintenance and support services to ensure that our clients' websites are running smoothly and up-to-date..`,
+  `Yes, we offer search engine optimization (SEO) services to help improve our clients' website visibility and rankings on search engines.ing.`,
+  `Our pricing structure for web development services varies depending on the scope and complexity of the project. We provide transparent and competitive pricing during the consultation process.`,
+  `To get started with a web development project, simply contact us through our website or give us a call. We will schedule a consultation to discuss your project and provide you with a proposal and project timeline.`,
 ];

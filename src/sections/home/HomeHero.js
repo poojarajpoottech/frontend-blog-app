@@ -156,8 +156,10 @@ function Description() {
       </m.div>
       <m.div variants={varFade().in}>
         <Typography variant="h6" sx={{ textAlign: 'center', color: 'grey.500', maxWidth: '800px' }}>
-          &quot;Stay ahead of the curve by learning in-demand digital skills for future job
-          opportunities with the fastest and most effective YouTube video.&quot;
+          &quot;Innovative Web Development Services to Help You Stand Out in the Crowd.&quot;
+        </Typography>
+        <Typography variant="h6" sx={{ textAlign: 'center', color: 'grey.500', maxWidth: '800px' }}>
+          &quot;Leading Your Online Presence with Expert Web Development Services.&quot;
         </Typography>
       </m.div>
       <m.div variants={varFade().in}>
@@ -180,7 +182,13 @@ function Description() {
         <Typography variant="h6" sx={{ color: 'grey.300' }}>
           <Typewriter
             options={{
-              strings: ['Web Developer', 'App Developer', 'YouTuber', 'Designwithsatya'],
+              strings: [
+                'Web Development',
+                'App Development',
+                'YouTube Tutorial',
+                'Designwithsatya',
+                'User Interface',
+              ],
               autoStart: true,
               loop: true,
               delay: 90,

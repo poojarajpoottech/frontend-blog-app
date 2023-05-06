@@ -70,12 +70,12 @@ function Description() {
     <Stack spacing={3} sx={{ mb: 10, textAlign: 'center' }}>
       <m.div variants={varFade().inUp}>
         <Typography component="div" variant="overline" sx={{ mb: 2, color: 'text.primary' }}>
-          Hi, Satyendra Singh 👋
+          "Hello friends" 👋
         </Typography>
       </m.div>
 
       <m.div variants={varFade().inDown}>
-        <Typography variant="h2">What you will get</Typography>
+        <Typography variant="h2">What you will get ?</Typography>
       </m.div>
 
       <m.div variants={varFade().inDown}>

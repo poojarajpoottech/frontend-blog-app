@@ -45,8 +45,8 @@ export default function HelpHero() {
           <br />
 
           <Stack spacing={2} display="inline-flex" direction="row" sx={{ color: 'common.white' }}>
-            <TextAnimate text="How To Get" />
-            <TextAnimate text="Code?" />
+            <TextAnimate text="How To Help" />
+            <TextAnimate text="Me?" />
           </Stack>
           <m.div variants={varFade().inRight}>
             <Typography
@@ -57,14 +57,10 @@ export default function HelpHero() {
                 fontWeight: 'fontWeightMedium',
               }}
             >
-              Satyendra Singh,I want to tell everyone I live in a very small village. And my father
-              is a farmer. You all know how much we can earn by doing farming.Earlier I used to do
-              job in IT field.But I have left that job.Because I had some family responsibilities.
-              Which I was not able to fulfill from that job.So I decided to share my knowledge on
-              YouTube. For 2 Months I have been sharing knowledge on coding and uploading many
-              videos on YouTube.So I believed in Just keep doing the good things in life by helping
-              others and dont expect anything in return because God is watching and Karma will give
-              us everything for sure”.
+              I hope this message finds you well. As a web developer, I am passionate about sharing
+              my knowledge and helping others learn about the field. Recently, I have been working
+              on creating technical tutorials for YouTube and I believe they can be a valuable
+              resource for those looking to improve their skills.
             </Typography>
           </m.div>
         </StyledContent>

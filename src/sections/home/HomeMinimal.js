@@ -13,54 +13,33 @@ const CARDS = [
     icon: ' /assets/icons/home/ic_make_brand.svg',
     title: 'Make Brand',
     description:
-      'We make websites for the online market backed with research-driven, data-rich information.',
-  },
-  {
-    icon: ' /assets/icons/home/ic_react.svg',
-    title: 'React js',
-    description:
-      'I will create your project with react js and with code quality. It helps you to create projects fastest and easily customized packages for your projects.',
+      'If youre looking for a trusted partner for your web development needs, look no further than Designwithsatya. Contact us today to learn more about how we can help you achieve your online goals.',
   },
   {
     icon: ' /assets/icons/home/ic_development.svg',
-    title: 'Development',
+    title: 'Web Development',
     description:
-      'Appnovation offers a variety of website design and development services, from creating mobile web development solutions and responsive website designs',
+      'Our team of expert web developers and designers at Designwithsatya offers a wide range of web development services to help businesses succeed online. From responsive design to web application development, we have the expertise to help you achieve your goals.',
   },
   {
     icon: ' /assets/icons/home/ic_figma.svg',
     title: 'UI/UX Designer',
     description:
-      'We provide services like UX Audit, UX Research, UI UX Design, User Testing, UX Innovation',
+      'Our team of experienced UI/UX designers at Designwithsatya offers customized design solutions that focus on user experience and engagement. From wireframing to prototyping and testing, we provide a full range of design services to help you achieve your goals.',
   },
-  {
-    icon: ' /assets/icons/home/ic_nodejs.svg',
-    title: 'Node Js ',
-    description:
-      'Our product engineering services include architecture, design, development, testing, security, deployment.',
-  },
+
   {
     icon: ' /assets/icons/home/ic_mobileapplication.svg',
     title: 'Mobile Application',
     description:
-      'Services in the mobile app development industry provide end-to-end organization, conceptualization, design.',
+      'Our mobile application development services at Designwithsatya are designed to help businesses reach their customers on-the-go. We provide end-to-end development solutions, including design, development, testing, and deployment, to help you achieve your mobile goals.',
   },
-  {
-    icon: ' /assets/icons/home/ic_nextjs.svg',
-    title: 'Next JS',
-    description:
-      'Services in the Next JS website development industry provide end-to-end organization, conceptualization, design.',
-  },
-  {
-    icon: ' /assets/icons/home/ic_redux.svg',
-    title: 'Redux ToolKit',
-    description: 'Make services a natural part of redux architecture',
-  },
+
   {
     icon: ' /assets/icons/home/ic_seo.svg',
     title: 'SEO',
     description:
-      'Get in touch with us for guranteed quality leads and traffic on your website. Get Dedicated SEO Manager, Content Optimisation, Link Building, Analytics Tracking & More!',
+      'At Designwithsatya, we provide SEO services to help businesses improve their online visibility and attract more traffic. Our team of experienced professionals uses the latest SEO techniques to ensure that your website ranks well in search engine results.',
   },
 ];
 
@@ -105,12 +84,10 @@ export default function HomeMinimal() {
           </m.div>
           <m.div variants={varFade().inUp}>
             <Typography variant="subtitle1">
-              Are you looking to improve your web development skills and stay up-to-date on the
-              latest trends? Our web development blog is here to help! Our team of full-stack
-              developers, designers, and researchers shares insights and tips on a wide range of
-              topics, from front-end development with HTML, CSS, and JavaScript, to back-end
-              development with Node.js and beyond. Join us on our journey to explore the exciting
-              world of web development and take your skills to the next level.
+              At Designwithsatya, we specialize in creating modern, user-friendly websites that help
+              businesses and organizations achieve their online goals. Our web development solutions
+              are tailored to the unique needs of each client, ensuring that their website meets
+              their specific requirements and objectives.
             </Typography>
           </m.div>
         </Stack>
@@ -140,11 +117,13 @@ export default function HomeMinimal() {
                   sx={{ mx: 'auto', width: 48, height: 48 }}
                 />
 
-                <Typography variant="h5" sx={{ mt: 8, mb: 2 }}>
+                <Typography variant="h5" sx={{ mt: 4, mb: 2 }}>
                   {card.title}
                 </Typography>
 
-                <Typography sx={{ color: 'text.secondary' }}>{card.description}</Typography>
+                <Typography sx={{ color: 'text.secondary', align: 'left' }}>
+                  {card.description}
+                </Typography>
               </StyledCard>
             </m.div>
           ))}

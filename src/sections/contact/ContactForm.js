@@ -11,21 +11,21 @@ import { LoadingButton } from '@mui/lab';
 // components
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import Cookies from 'js-cookie';
 import { MotionViewport, varFade } from '../../components/animate';
 import FormProvider, { RHFTextField } from '../../components/hook-form';
 import { useSnackbar } from '../../components/snackbar';
 
 // ----------------------------------------------------------------------
 
-const token = Cookies.get('jwtToken');
-console.log(`my token`, token);
-
+const token =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDQ3NzJkOGYzMzVkMTU3NzQ2YzI5NjEiLCJpYXQiOjE2ODMyODAzOTB9._y7blvuD0nneXBOUUMOwtsCCOcplLzPHF6O0mNO3sjA';
+const Restoken = localStorage.getItem('token');
+console.log(Restoken);
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 export default function ContactForm() {
-  const [userData, setUserData] = useState(null);
+  const [userData, setUserData] = useState({});
   const { enqueueSnackbar } = useSnackbar();
 
   const RegisterSchema = Yup.object().shape({
@@ -59,15 +59,30 @@ export default function ContactForm() {
   const onSubmit = async (data) => {
     const { name, email, phone, message } = data;
     try {
-      const Response = await axios.post(`${process.env.HOST_API_KEY}/api/contact-us`, {
-        name,
-        email,
-        phone,
-        message,
-      });
+      const Response = await axios.post(
+        `${process.env.HOST_API_KEY}/api/contact-us`,
+        {
+          name,
+          email,
+          phone,
+          message,
+        },
+        {
+          withCredentials: true,
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+            'Access-Control-Allow-Origin': [
+              'https://designwithsatya.vercel.app',
+              'http://localhost:3031',
+            ],
+          },
+        }
+      );
       const resultdata = await Response;
       if (!resultdata) {
-        console.log('somthing wen wrong');
+        console.log('somthing went wrong?');
       } else {
         enqueueSnackbar('Messages sent successfully!');
       }
@@ -98,7 +113,7 @@ export default function ContactForm() {
   // };
   useEffect(() => {
     getData();
-  });
+  }, []);
 
   const getData = async () => {
     try {
@@ -125,7 +140,7 @@ export default function ContactForm() {
       console.log(error);
     }
   };
-  console.log(userData);
+  console.log(userData, userData.name);
 
   return (
     <Stack component={MotionViewport} spacing={5}>

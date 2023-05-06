@@ -34,7 +34,7 @@ export default function NavHelp() {
             ),
           }}
         >
-          Hi,Satyendra Singh
+          "Hello, friends."
         </Typography>
 
         <Typography variant="body2" sx={{ color: 'text.secondary', whiteSpace: 'pre-line' }}>
