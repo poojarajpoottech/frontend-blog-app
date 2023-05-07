@@ -126,10 +126,29 @@ export default function HomeHero() {
             </Grid>
           </Grid>
         </Container>
-
         {isDesktop && <StyledEllipseTop />}
-
         <StyledEllipseBottom />
+        {isDesktop ? (
+          <Box style={{ position: 'fixed', bottom: 5, left: 0, padding: '10px' }}>
+            <Stack sx={{ color: 'grey.500', textAlign: 'center' }} spacing={2} direction="row">
+              {['js', 'ts', 'nextjs', 'node', 'figma'].map((platform) => (
+                <m.div key={platform} variants={varFade().in}>
+                  <SvgColor src={`/assets/icons/platforms/ic_${platform}.svg`} />
+                </m.div>
+              ))}
+            </Stack>
+          </Box>
+        ) : (
+          <Box style={{ bottom: 5, display: 'flex', justifyContent: 'center', padding: '5px' }}>
+            <Stack sx={{ color: 'grey.500', textAlign: 'center' }} spacing={2} direction="row">
+              {['js', 'ts', 'nextjs', 'node', 'figma'].map((platform) => (
+                <m.div key={platform} variants={varFade().in}>
+                  <SvgColor src={`/assets/icons/platforms/ic_${platform}.svg`} />
+                </m.div>
+              ))}
+            </Stack>
+          </Box>
+        )}
       </StyledRoot>
 
       <Box sx={{ height: { md: '100vh' } }} />
@@ -209,15 +228,6 @@ function Description() {
           </IconButton>
         ))}
       </Stack>
-      <Box style={{ position: 'fixed', bottom: 5, left: 0, padding: '10px' }}>
-        <Stack sx={{ color: 'grey.500', textAlign: 'center' }} spacing={2} direction="row">
-          {['js', 'ts', 'nextjs', 'node', 'figma'].map((platform) => (
-            <m.div key={platform} variants={varFade().in}>
-              <SvgColor src={`/assets/icons/platforms/ic_${platform}.svg`} />
-            </m.div>
-          ))}
-        </Stack>
-      </Box>
     </StyledDescription>
   );
 }
