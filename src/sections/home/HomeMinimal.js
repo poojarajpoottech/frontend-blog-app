@@ -29,14 +29,14 @@ const CARDS = [
   },
 
   {
-    icon: ' /assets/icons/home/ic_mobileapplication.svg',
+    icon: ' /assets/icons/home/ic_user.png',
     title: 'Mobile Application',
     description:
       'Our mobile application development services at Designwithsatya are designed to help businesses reach their customers on-the-go. We provide end-to-end development solutions, including design, development, testing, and deployment, to help you achieve your mobile goals.',
   },
 
   {
-    icon: ' /assets/icons/home/ic_seo.svg',
+    icon: ' /assets/icons/home/ic_seo.png',
     title: 'SEO',
     description:
       'At Designwithsatya, we provide SEO services to help businesses improve their online visibility and attract more traffic. Our team of experienced professionals uses the latest SEO techniques to ensure that your website ranks well in search engine results,to help you achieve your goals.',
