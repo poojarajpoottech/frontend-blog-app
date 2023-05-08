@@ -39,7 +39,7 @@ const CARDS = [
     icon: ' /assets/icons/home/ic_seo.svg',
     title: 'SEO',
     description:
-      'At Designwithsatya, we provide SEO services to help businesses improve their online visibility and attract more traffic. Our team of experienced professionals uses the latest SEO techniques to ensure that your website ranks well in search engine results.',
+      'At Designwithsatya, we provide SEO services to help businesses improve their online visibility and attract more traffic. Our team of experienced professionals uses the latest SEO techniques to ensure that your website ranks well in search engine results,to help you achieve your goals.',
   },
 ];
 
@@ -54,7 +54,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
   textAlign: 'center',
   padding: theme.spacing(10, 5),
-
+  minHeight: '200px',
   [theme.breakpoints.up('md')]: {
     boxShadow: 'none',
   },
@@ -93,7 +93,7 @@ export default function HomeMinimal() {
         </Stack>
 
         <Box
-          gap={{ xs: 3, lg: 10 }}
+          gap={{ xs: 3, lg: 3 }}
           display="grid"
           alignItems="center"
           gridTemplateColumns={{
@@ -117,11 +117,11 @@ export default function HomeMinimal() {
                   sx={{ mx: 'auto', width: 48, height: 48 }}
                 />
 
-                <Typography variant="h5" sx={{ mt: 4, mb: 2 }}>
+                <Typography variant="h6" sx={{ mt: 2, mb: 2 }}>
                   {card.title}
                 </Typography>
 
-                <Typography sx={{ color: 'text.secondary', align: 'left' }}>
+                <Typography variant="body2" align="justify" sx={{ color: 'text.secondary' }}>
                   {card.description}
                 </Typography>
               </StyledCard>
