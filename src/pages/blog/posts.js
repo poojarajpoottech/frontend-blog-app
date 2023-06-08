@@ -8,6 +8,7 @@ import CustomBreadcrumbs from '../../components/custom-breadcrumbs';
 import { SkeletonPostItem } from '../../components/skeleton';
 
 import { useSettingsContext } from '../../components/settings';
+import { PATH_DASHBOARD } from '../../routes/paths';
 
 import Iconify from '../../components/iconify';
 import MainLayout from '../../layouts/main';
@@ -101,7 +102,7 @@ export default function BlogPostsPage() {
           action={
             <Button
               component={NextLink}
-              href=""
+              href={PATH_DASHBOARD.blog.new}
               variant="contained"
               startIcon={<Iconify icon="eva:plus-fill" />}
             >

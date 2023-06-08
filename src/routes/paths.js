@@ -28,6 +28,7 @@ export const PATH_DASHBOARD = {
   blog: {
     root: path('/blog'),
     posts: path(ROOTS_DASHBOARD, '/blog/posts'),
+    new: path(ROOTS_DASHBOARD, '/blog/new'),
     view: (title) => path(ROOTS_DASHBOARD, `/blog/post/${title}`),
     demoView: path(ROOTS_DASHBOARD, '/blog/post/apply-these-7-secret-techniques-to-improve-event'),
   },

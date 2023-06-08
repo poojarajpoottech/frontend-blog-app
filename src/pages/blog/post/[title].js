@@ -3,7 +3,7 @@ import { useEffect, useState, useCallback } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 // @mui
-import { Stack, Container, Typography, Box } from '@mui/material';
+import { Stack, Container, Typography, Box, Divider } from '@mui/material';
 // routes
 import { PATH_DASHBOARD } from '../../../routes/paths';
 // utils
@@ -17,7 +17,7 @@ import CustomBreadcrumbs from '../../../components/custom-breadcrumbs';
 import { useSettingsContext } from '../../../components/settings';
 import { SkeletonPostDetails } from '../../../components/skeleton';
 // sections
-import { BlogPostHero, BlogPostCard } from '../../../sections/blog';
+import { BlogPostHero, BlogPostCard, BlogPostTags } from '../../../sections/blog';
 
 // ----------------------------------------------------------------------
 
@@ -126,6 +126,17 @@ export default function BlogPostPage() {
                 px: { md: 5 },
               }}
             />
+            <Stack
+              spacing={3}
+              sx={{
+                py: 5,
+                px: { md: 5 },
+              }}
+            >
+              <Divider />
+              <BlogPostTags post={post} />
+              <Divider />
+            </Stack>
           </Stack>
         )}
 

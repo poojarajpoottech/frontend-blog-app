@@ -5,7 +5,6 @@ import MainLayout from '../layouts/main';
 import ScrollProgress from '../components/scroll-progress';
 // sections
 import { HomeHero, HomeMinimal, HomeLookingFor, HomeAdvertisement } from '../sections/home';
-import CameraView from './CameraView';
 
 // ----------------------------------------------------------------------
 
@@ -34,7 +33,6 @@ export default function HomePage() {
         <HomeMinimal />
         <HomeLookingFor />
         <HomeAdvertisement />
-        <CameraView />
       </Box>
     </>
   );

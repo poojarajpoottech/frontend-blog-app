@@ -13,6 +13,7 @@ import SvgColor from '../components/svg-color';
 import Iconify from '../components/iconify';
 import { varFade, MotionViewport } from '../components/animate';
 import useCountdown from '../hooks/useCountdown';
+import CheckoutPage from './CheckoutPage';
 
 // ----------------------------------------------------------------------
 
@@ -173,21 +174,7 @@ function PlanCard() {
                 </Stack>
 
                 <Stack sx={{ mt: 5 }} alignItems="flex-start">
-                  <form action="/api/checkout_sessions" method="POST">
-                    <Button
-                      variant="contained"
-                      target="_blank"
-                      rel="noopener"
-                      type="submit"
-                      role="link"
-                      sx={{
-                        color: (theme) =>
-                          theme.palette.mode === 'light' ? 'common.white' : 'grey.300',
-                      }}
-                    >
-                      Get Source Code - Rs 99
-                    </Button>
-                  </form>
+                  <CheckoutPage />
                 </Stack>
               </Stack>
             </Box>

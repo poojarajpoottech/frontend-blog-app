@@ -1,9 +1,6 @@
 import { m } from 'framer-motion';
 // @mui
-import { useTheme } from '@mui/material/styles';
 import { Button, Box, Container, Stack, Typography } from '@mui/material';
-// utils
-import { bgGradient } from '../../utils/cssStyles';
 
 // components
 import Iconify from '../../components/iconify';
@@ -13,8 +10,6 @@ import { MotionViewport, varFade } from '../../components/animate';
 // ----------------------------------------------------------------------
 
 export default function HomeAdvertisement() {
-  const theme = useTheme();
-
   return (
     <Container sx={{ mb: 5 }} component={MotionViewport}>
       <Stack
@@ -22,11 +17,7 @@ export default function HomeAdvertisement() {
         justifyContent="space-around"
         direction={{ xs: 'column', md: 'row' }}
         sx={{
-          ...bgGradient({
-            direction: '135deg',
-            startColor: theme.palette.primary.main,
-            endColor: theme.palette.primary.dark,
-          }),
+          backgroundImage: `linear-gradient(135deg, #21dbaa, #00b4ef, #0768dd, #5f1ae5)`,
           borderRadius: 2,
           pb: { xs: 5, md: 0 },
         }}
