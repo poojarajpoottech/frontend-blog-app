@@ -36,16 +36,19 @@ export default IconButtonAnimate;
 const varSmall = {
   hover: { scale: 1.1 },
   tap: { scale: 0.95 },
+  rotate: { rotate: 360 },
 };
 
 const varMedium = {
   hover: { scale: 1.09 },
   tap: { scale: 0.97 },
+  rotate: { rotate: 360 },
 };
 
 const varLarge = {
   hover: { scale: 1.08 },
   tap: { scale: 0.99 },
+  rotate: { rotate: 360 },
 };
 
 AnimateWrap.propTypes = {
@@ -60,6 +63,12 @@ function AnimateWrap({ size, children }) {
   return (
     <Box
       component={m.div}
+      transition={{
+        duration: 5,
+        ease: 'linear',
+        repeat: Infinity,
+      }}
+      animate="rotate"
       whileTap="tap"
       whileHover="hover"
       variants={(isSmall && varSmall) || (isLarge && varLarge) || varMedium}

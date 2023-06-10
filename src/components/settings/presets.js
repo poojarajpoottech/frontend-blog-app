@@ -6,7 +6,6 @@ import palette from '../../theme/palette';
 const themePalette = palette('light');
 
 export const presets = [
-  // DEFAULT
   {
     name: 'default',
     ...themePalette.primary,
@@ -14,11 +13,11 @@ export const presets = [
   // CYAN
   {
     name: 'cyan',
-    lighter: '#CCF4FE',
-    light: '#68CDF9',
-    main: '#078DEE',
-    dark: '#0351AB',
-    darker: '#012972',
+    lighter: '#C8FAD6',
+    light: '#5BE49B',
+    main: '#00A76F',
+    dark: '#007867',
+    darker: '#004B50',
     contrastText: '#FFFFFF',
   },
   // PURPLE
@@ -54,11 +53,11 @@ export const presets = [
   // RED
   {
     name: 'red',
-    lighter: '#C8FACD',
-    light: '#5BE584',
-    main: '#00AB55',
-    dark: '#007B55',
-    darker: '#005249',
+    lighter: '#FFE3D5',
+    light: '#FFC1AC',
+    main: '#FF3030',
+    dark: '#B71833',
+    darker: '#7A0930',
     contrastText: '#FFFFFF',
   },
 ];

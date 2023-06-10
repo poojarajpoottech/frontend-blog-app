@@ -18,20 +18,20 @@ const GREY = {
 };
 
 const PRIMARY = {
-  lighter: '#FFE3D5',
-  light: '#FFC1AC',
-  main: '#FF3030',
-  dark: '#B71833',
-  darker: '#7A0930',
+  lighter: '#CCF4FE',
+  light: '#68CDF9',
+  main: '#078DEE',
+  dark: '#0351AB',
+  darker: '#012972',
   contrastText: '#FFFFFF',
 };
 
 const SECONDARY = {
-  lighter: '#D6E4FF',
-  light: '#84A9FF',
-  main: '#3366FF',
-  dark: '#1939B7',
-  darker: '#091A7A',
+  lighter: '#EFD6FF',
+  light: '#C684FF',
+  main: '#8E33FF',
+  dark: '#5119B7',
+  darker: '#27097A',
   contrastText: '#FFFFFF',
 };
 
@@ -45,12 +45,12 @@ const INFO = {
 };
 
 const SUCCESS = {
-  lighter: '#D8FBDE',
-  light: '#86E8AB',
-  main: '#36B37E',
-  dark: '#1B806A',
-  darker: '#0A5554',
-  contrastText: '#FFFFFF',
+  lighter: '#D3FCD2',
+  light: '#77ED8B',
+  main: '#22C55E',
+  dark: '#118D57',
+  darker: '#065E49',
+  contrastText: '#ffffff',
 };
 
 const WARNING = {
@@ -72,7 +72,10 @@ const ERROR = {
 };
 
 const COMMON = {
-  common: { black: '#000000', white: '#FFFFFF' },
+  common: {
+    black: '#000000',
+    white: '#FFFFFF',
+  },
   primary: PRIMARY,
   secondary: SECONDARY,
   info: INFO,
@@ -80,7 +83,7 @@ const COMMON = {
   warning: WARNING,
   error: ERROR,
   grey: GREY,
-  divider: alpha(GREY[500], 0.24),
+  divider: alpha(GREY[500], 0.2),
   action: {
     hover: alpha(GREY[500], 0.08),
     selected: alpha(GREY[500], 0.16),
