@@ -1,54 +1,24 @@
 import orderBy from 'lodash/orderBy';
 import React, { useState, useCallback, useEffect } from 'react';
 import Head from 'next/head';
-import NextLink from 'next/link';
-import { Button, Grid, Container, Stack, Pagination } from '@mui/material';
+import { Button, Grid, Container, Stack, Pagination, Typography } from '@mui/material';
 
-import CustomBreadcrumbs from '../../components/custom-breadcrumbs';
 import { SkeletonPostItem } from '../../components/skeleton';
 
 import { useSettingsContext } from '../../components/settings';
-import { PATH_DASHBOARD } from '../../routes/paths';
 
 import Iconify from '../../components/iconify';
 import MainLayout from '../../layouts/main';
 import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../../sections/blog';
 import axios from '../../utils/axios';
 
-import { AppFeatured } from '../../sections/home';
-import UserProfilePage from './profile';
+// import { AppFeatured } from '../../sections/home';
+// import UserProfilePage from './profile';
 
 const SORT_OPTIONS = [
   { value: 'latest', label: 'Latest' },
   { value: 'popular', label: 'Popular' },
   { value: 'oldest', label: 'Oldest' },
-];
-
-const _appFeatured = [
-  {
-    id: 1,
-    image: '/assets/images/banner/banner_2.jpg',
-    title: 'Latest Update',
-    description: 'UX',
-  },
-  {
-    id: 2,
-    image: '/assets/images/banner/banner_3.jpg',
-    title: 'Latest Update',
-    description: 'demo',
-  },
-  {
-    id: 3,
-    image: '/assets/images/banner/banner_4.jpg',
-    title: 'Latest Update',
-    description: 'demo',
-  },
-  {
-    id: 4,
-    image: '/assets/images/banner/banner_5.jpg',
-    title: 'Latest Update',
-    description: 'Update',
-  },
 ];
 
 BlogPostsPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
@@ -82,10 +52,18 @@ export default function BlogPostsPage() {
         <title> Blog: Posts | designwithsatya</title>
       </Head>
       <Container maxWidth={themeStretch ? false : 'lg'}>
-        <AppFeatured list={_appFeatured} />
-        <UserProfilePage />
-        <CustomBreadcrumbs
-          heading="Blog Tutorial"
+        {/* <AppFeatured list={_appFeatured} /> */}
+        {/* <UserProfilePage /> */}
+        <Typography
+          variant="h4"
+          sx={{
+            my: { xs: 3, md: 5 },
+          }}
+        >
+          Blog
+        </Typography>
+        {/* <CustomBreadcrumbs
+          heading="Blog"
           links={[
             {
               name: 'Home',
@@ -109,7 +87,7 @@ export default function BlogPostsPage() {
               New Post
             </Button>
           }
-        />
+        /> */}
 
         <Stack mb={5} direction="row" alignItems="center" justifyContent="space-between">
           <BlogPostsSearch />
@@ -127,6 +105,23 @@ export default function BlogPostsPage() {
             )
           )}
         </Grid>
+        {posts.length > 2 && (
+          <Stack
+            alignItems="center"
+            sx={{
+              mt: 8,
+              mb: { xs: 10, md: 10 },
+            }}
+          >
+            <Button
+              size="large"
+              variant="outlined"
+              startIcon={<Iconify icon="svg-spinners:12-dots-scale-rotate" width={24} />}
+            >
+              Load More
+            </Button>
+          </Stack>
+        )}
         <Stack>
           <Pagination
             count={posts.length}
