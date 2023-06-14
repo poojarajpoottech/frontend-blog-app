@@ -9,7 +9,7 @@ export default function LoginUnprotectedPage() {
   return (
     <>
       <Head>
-        <title> Login Unprotected | Designwithsatya</title>
+        <title> Login Unprotected | UnboxHub</title>
       </Head>
 
       <Login />

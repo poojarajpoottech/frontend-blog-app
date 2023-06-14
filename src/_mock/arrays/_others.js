@@ -18,7 +18,7 @@ export const _faqs = [...Array(10)].map((_, index) => ({
 // ----------------------------------------------------------------------
 
 export const _skills = [...Array(3)].map((_, index) => ({
-  label: ['Backend Development', 'Frontend Development', 'UI/UX Design'][index],
+  label: ['Vedio Quality', 'Product Quality', 'customer review'][index],
   value: _mock.number.percent(index),
 }));
 

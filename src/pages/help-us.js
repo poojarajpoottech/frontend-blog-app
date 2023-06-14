@@ -27,7 +27,7 @@ export default function HelpUsPage() {
   return (
     <>
       <Head>
-        <title> Help | Designwithsatya</title>
+        <title> Help | UnboxHub</title>
       </Head>
       <HelpHero />
       <Container component={MotionViewport} sx={{ mt: 5, mb: 5 }}>
@@ -37,25 +37,29 @@ export default function HelpUsPage() {
           </Typography>
         </m.div>
         <Box sx={{ mb: 5, mt: 5 }}>
-          <Typography variant="subtitle2">
-            However, in order to continue creating high-quality content, I am in need of some
-            financial assistance. I am hoping to raise a small amount of money, around 50 rupees, to
-            cover the costs of video editing software and other equipment necessary to produce these
-            tutorials.
+          <Typography variant="subtitle2" sx={{ mb: 2 }}>
+            I hope this message finds you well. I wanted to take a moment to express my gratitude
+            for your continued support and enthusiasm for the unboxing and product-related content I
+            provide on our website. Your engagement and feedback have been invaluable in shaping the
+            direction of our platform.
           </Typography>
           <Typography variant="subtitle2" sx={{ mb: 2 }}>
-            If you are able and willing to contribute, any amount would be greatly appreciated. Not
-            only would your support help me continue creating these tutorials, but it would also
-            benefit others who are looking to improve their skills in web development.
-          </Typography>
-          <Typography variant="subtitle2" sx={{ mb: 2 }}>
-            To continue producing high-quality content, I need some financial assistance to cover
-            the costs of video editing software and other equipment necessary for producing these
-            tutorials. That's why I'm asking for your support. Even a small contribution of
+            As you may know, creating high-quality content requires dedication, time, and resources.
+            In order to ensure that we continue to deliver the best possible experience, I am
+            reaching out to you today with a small request for financial assistance. I am looking to
+            raise funds,
             <span style={{ color: theme.palette.mode === 'light' ? 'purple' : 'red' }}>
-              50 rupees would go a long way in helping me
+              approximately 50 rupees,
             </span>
-            50 rupees would go a long way in helping me continue creating these tutorials.{' '}
+            to cover the costs of essential video editing software and other equipment necessary to
+            produce informative tutorials.
+          </Typography>
+          <Typography variant="subtitle2" sx={{ mb: 2 }}>
+            For those who are able and willing to contribute, you can do so by [insert preferred
+            method of contribution, such as providing a link to a donation page or specifying
+            payment options]. Your generosity will go a long way in supporting our mission of
+            delivering high-quality tutorials and improving the overall experience for our
+            community.
           </Typography>
           <Typography
             variant="h6"

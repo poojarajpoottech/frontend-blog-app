@@ -23,7 +23,7 @@ export default function ComingSoonPage() {
   return (
     <>
       <Head>
-        <title> Coming Soon | Designwithsatya</title>
+        <title> Coming Soon | UnboxHub</title>
       </Head>
 
       <Typography variant="h3" paragraph>

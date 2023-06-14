@@ -24,7 +24,7 @@ export default function BlogNewPostPage() {
   return (
     <>
       <Head>
-        <title> Blog: New Post | Designwithsatya</title>
+        <title> Blog: New Post | UnboxHub</title>
       </Head>
 
       <Container sx={{ mb: 10 }} maxWidth={themeStretch ? false : 'lg'}>

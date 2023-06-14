@@ -79,7 +79,7 @@ export default function BlogPostPage() {
   return (
     <>
       <Head>
-        <title>{`Blog: ${post?.title || ''} | designwithsatya`}</title>
+        <title>{`Blog: ${post?.title || ''} | UnboxHub`}</title>
       </Head>
       <Container maxWidth={themeStretch ? false : 'lg'}>
         <CustomBreadcrumbs

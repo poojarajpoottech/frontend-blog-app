@@ -16,40 +16,40 @@ import { MotionViewport, varFade } from '../../components/animate';
 
 const TESTIMONIALS = [
   {
-    name: 'Titan Company',
+    name: 'Ailesh Kumar',
     rating: 5,
     dateCreate: new Date(),
     content: `Excellent Work! Thanks a lot!`,
   },
   {
-    name: 'JMZ Technologies',
+    name: 'Abhik Patra',
     rating: 5,
     dateCreate: new Date(),
-    content: `It's a very good dashboard and we are really liking the product . We've done some things, like migrate to TS and implementing a react useContext api, to fit our job methodology but the product is one of the best in terms of design and application architecture. The team did a really good job.`,
+    content: `Bhai maine kharida hai apke website ke link se achha product tha.Thanks a lot!`,
   },
   {
-    name: 'Infanion',
+    name: 'prabhakar dixit',
     rating: 5,
     dateCreate: new Date(),
-    content: `Customer support is realy fast and helpful the desgin of this theme is looks amazing also the code is very clean and readble realy good job !`,
+    content: `Dude, your website design is really good. It's clear that you have added links to your website very well, which makes it very easy to buy products.`,
   },
   {
-    name: 'Satyendra Singh',
+    name: 'Pratibha Rajpoot',
     rating: 4,
     dateCreate: new Date(),
-    content: `Amazing, really good code quality and gives you a lot of examples for implementations.`,
+    content: `Amazing, really good code quality and gives you a lot of examples.`,
   },
   {
     name: 'Venkatarami V. Reddy',
     rating: 4,
     dateCreate: new Date(),
-    content: `Got a few questions after purchasing the product. The owner responded very fast and very helpfull. Overall the code is excellent and works very good. 5/5 stars!`,
+    content: `Got a few questions after purchasing the product. The owner responded very fast and very helpfull. Overall works very good. 5/5 stars!`,
   },
   {
     name: 'Pramod Kumar',
     rating: 2,
     dateCreate: new Date(),
-    content: `CEO of Codealy.io here. We’ve built a developer assessment platform that makes sense - tasks are based on git repositories and run in virtual machines. We automate the pain points - storing candidates code, running it and sharing test results with the whole team, remotely. Bought this template as we need to provide an awesome dashboard for our early customers. I am super happy with purchase. The code is just as good as the design. Thanks!`,
+    content: `Thank you bhai, Super washing machine!`,
   },
 ];
 
@@ -104,11 +104,12 @@ export default function AboutTestimonials() {
 
               <m.div variants={varFade().inUp}>
                 <Typography sx={{ color: 'common.white' }}>
-                  &quot;My goal is to create a product and service that not only meets, but exceeds
-                  your expectations, and becomes a valuable part of your daily routine. That&apos;s
-                  why I am dedicated to constantly improving our services and listening carefully to
-                  feedback from our users. By collaborating with you and incorporating your ideas,
-                  we can create the best possible experience for all of our customers.&quot;
+                  If you are someone who loves staying up-to-date with the latest product releases,
+                  enjoys the anticipation of unboxing a new gadget or fashion item, and values
+                  informed decision-making, then UnboxHub is the perfect platform for you. We
+                  understand your desire to explore products beyond the surface, dive deep into
+                  their features and functionality, and gain comprehensive knowledge to make
+                  confident choices.
                 </Typography>
               </m.div>
 

@@ -22,34 +22,27 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content={palette('light').primary.main} />
 
           {/* Favicon */}
-          <link rel="apple-touch-icon" sizes="180x180" href="/favicon/mylogo.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon/mylogo.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon/mylogo.png" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/favicon/mylogo.avif" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon/mylogo.avif" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon/mylogo.avif" />
 
           {/* Emotion */}
           <meta name="emotion-insertion-point" content="" />
           {this.props.emotionStyleTags}
 
           {/* Meta */}
+
           <meta
             name="description"
-            content="Welcome to designwithsatya, a blog dedicated to all things technical and web development. Whether you're a seasoned pro or just starting out, our expert insights and tips will help you stay on top of the latest industry trends and advance your skills"
-          />
-          <meta
-            name="description"
-            content="Interested in learning the ins and outs of web development? Look no further than designwithsatya, where we cover everything from programming languages to server architecture to help you become a more well-rounded and versatile developer."
+            content="Welcome to UnboxHub, the ultimate destination for product unboxing and in-depth information. Explore our extensive collection of unboxing videos and detailed reviews, where we unravel the excitement of unboxing various products across different categories. From gadgets and electronics to beauty and fashion, we provide unbiased insights, pros and cons, and valuable recommendations to help you make informed purchasing decisions. Discover the latest trends, compare products side by side, and gain expert insights into the best products on the market. Join our vibrant community of unboxing enthusiasts and stay updated with the hottest releases and exclusive deals. Get ready to experience the thrill of unboxing and unlock a world of product knowledge at UnboxHub"
           />
           <meta
             name="keywords"
-            content="User Experience (UX) Design,User Interface (UI) Design,Graphic Design,Web Design,Mobile App Design,Design Thinking,Design Tools,Design Trends,Design Inspiration,Product Design,"
+            content="Product unboxing,Unboxing reviews,Product reviews,Unboxing videos,Product information,Best product unboxing,Unboxing experience,Product specifications,Honest product reviews,Unboxing guide,Unboxing tutorials,Unboxing tips,Latest product releases,Top product recommendations,Unboxing insights,Comparative product analysis,Popular product unboxing,Unboxing enthusiasts,Unboxing community,Unboxing trends"
           />
           <meta
             name="keywords"
-            content="Programming languagesWeb development,Mobile app development,Cybersecurity,Artificial intelligence,Cloud computing,Data analytics,Internet of Things (IoT),Machine learning,DevOps"
-          />
-          <meta
-            name="keywords"
-            content="Design with Satya's Top 10 UX Design Trends for 2023,Maximizing Mobile App Design with Design with Satya,Design Thinking 101: A Guide from Design with SatyaDesign with Satya's Ultimate Guide to Graphic Design PrinciplesWeb Design Best Practices: Tips from Design with Satya"
+            content="Product unboxing,Unboxing reviews,Product reviews,Unboxing videos,Product information,Best product unboxing,Unboxing experience,Product specifications,Honest product reviews,Unboxing guide,Unboxing tutorials,Unboxing tips,Latest product releases,Top product recommendations,Unboxing insights,Comparative product analysis,Popular product unboxing,Unboxing enthusiasts,Unboxing community,Unboxing trends"
           />
         </Head>
 

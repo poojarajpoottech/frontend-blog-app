@@ -21,7 +21,7 @@ export default function Page403() {
   return (
     <>
       <Head>
-        <title> 403 Forbidden | Designwithsatya</title>
+        <title> 403 Forbidden | UnboxHub</title>
       </Head>
 
       <MotionContainer>

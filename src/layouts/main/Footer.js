@@ -15,7 +15,7 @@ import Iconify from '../../components/iconify';
 
 const LINKS = [
   {
-    headline: 'DesignWithSatya',
+    headline: 'UnboxHub',
     children: [
       { name: 'About us', href: PATH_PAGE.about },
       { name: 'Contact us', href: PATH_PAGE.contact },
@@ -32,7 +32,7 @@ const LINKS = [
   {
     headline: 'Contact',
     children: [
-      { name: 'designwithsatyendra@gmail.com', href: '#' },
+      { name: 'unboxhub@gmail.com', href: '#' },
       { name: '91+ 7869351845', href: '#' },
       {
         name: 'Roopena Agrahara, Bengaluru, Karnataka 560068',
@@ -75,9 +75,9 @@ export default function Footer() {
 
           <Grid item xs={8} md={3}>
             <Typography variant="body2" sx={{ pr: { md: 5 } }}>
-              At Designwithsatya, we design and develop better websites that deliver results. Trust
-              us as your web development partner and achieve your online goals with our expertise in
-              creating user-friendly, functional websites.
+              Join us at UnboxPros and embark on a journey of discovery. Uncover the best products,
+              gain valuable insights, and make confident choices. Your unboxing adventure starts
+              here.
             </Typography>
 
             <Stack
@@ -150,7 +150,7 @@ export default function Footer() {
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
-          Copyright © 2023 DesignWithSatya. All Rights Reserved.
+          Copyright © 2023 UnboxHub. All Rights Reserved.
         </Typography>
       </Container>
     </Box>

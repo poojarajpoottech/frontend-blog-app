@@ -68,7 +68,7 @@ function Description() {
     >
       <m.div variants={varFade().inDown}>
         <Typography variant="overline" component="div" sx={{ color: 'text.disabled' }}>
-          Designwithsatya
+          UnboxHub
         </Typography>
       </m.div>
 
@@ -80,7 +80,7 @@ function Description() {
             mb: { md: 5 },
           }}
         >
-          Who can hire me?
+          Who Can Assist You?
         </Typography>
       </m.div>
 
@@ -109,6 +109,6 @@ const VisitButton = (
     href="/experience"
     endIcon={<Iconify icon="ic:round-arrow-right-alt" />}
   >
-    Visit My Experience Page
+    Visit My YouTube
   </Button>
 );

@@ -15,7 +15,7 @@ import { textGradient, bgGradient, bgBlur } from '../../theme/css';
 import { secondaryFont } from '../../theme/typography';
 // layouts
 import { HEADER } from '../../layouts/config-layout';
-import SvgColor from '../../components/svg-color';
+import SvgColor from '../../components/svg-color-homepage';
 import { MotionContainer, varFade } from '../../components/animate';
 
 // ----------------------------------------------------------------------
@@ -41,6 +41,9 @@ const StyledDescription = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
   padding: theme.spacing(15, 0),
+  [theme.breakpoints.up('md')]: {
+    padding: theme.spacing(10, 0),
+  },
 }));
 
 const StyledWrapper = styled('div')(({ theme }) => ({
@@ -66,7 +69,7 @@ const StyledTextGradient = styled(m.h1)(({ theme }) => ({
   fontSize: `${74 / 45}rem`,
   fontFamily: secondaryFont.style.fontFamily,
   [theme.breakpoints.up('md')]: {
-    fontSize: `${96 / 32}rem`,
+    fontSize: `${96 / 20}rem`,
   },
 }));
 
@@ -143,13 +146,13 @@ export default function HomeHero() {
             repeat: Infinity,
           }}
         >
-          WELCOME TO DESIGNWITHSATYA
+          WELCOME TO UnBoxHub
         </StyledTextGradient>
       </m.div>
 
       <m.div variants={varFade().in}>
         <Typography variant="h6" sx={{ textAlign: 'center', maxWidth: '800px' }}>
-          &quot;Innovative Web Development Services to Help You Stand Out in the Crowd.&quot;
+          &quot;Unveiling the Best Products for You.&quot;
         </Typography>
       </m.div>
       <m.div variants={varFade().in}>
@@ -173,11 +176,11 @@ export default function HomeHero() {
           <Typewriter
             options={{
               strings: [
-                'Web Development',
-                'App Development',
-                'YouTube Tutorial',
-                'Designwithsatya',
-                'User Interface',
+                'Unboxing Product',
+                'Recommendations',
+                'Information',
+                'Latest Updates',
+                'Advertising',
               ],
               autoStart: true,
               loop: true,
@@ -202,13 +205,13 @@ export default function HomeHero() {
         ))}
       </Stack>
 
-      <Stack spacing={3} sx={{ textAlign: 'center', opacity: 0.48 }}>
+      <Stack spacing={2} sx={{ textAlign: 'center', opacity: 0.8 }}>
         <m.div variants={varFade().in}>
           <Typography variant="overline">Available For</Typography>
         </m.div>
 
         <Stack spacing={2} direction="row" justifyContent="center">
-          {['figma', 'js', 'ts', 'nextjs'].map((platform) => (
+          {['myntra', 'flipkart', 'meesho', 'amazon'].map((platform) => (
             <m.div key={platform} variants={varFade().in}>
               <SvgColor src={`/assets/icons/platforms/ic_${platform}.svg`} />
             </m.div>

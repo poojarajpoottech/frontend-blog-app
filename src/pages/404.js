@@ -21,7 +21,7 @@ export default function Page404() {
   return (
     <>
       <Head>
-        <title> 404 Page Not Found | Designwithsatya</title>
+        <title> 404 Page Not Found | UnboxHub</title>
       </Head>
 
       <MotionContainer>

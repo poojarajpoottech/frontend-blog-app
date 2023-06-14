@@ -17,12 +17,11 @@ export default function AboutVision() {
         <Typography
           sx={{ textAlign: 'center', maxWidth: 800, color: 'text.secondary', mx: 'auto' }}
         >
-          "At DesignWithSatya, our vision is to empower and inspire web developers around the world
-          by providing the highest-quality tutorials and cutting-edge technology. We're committed to
-          helping you stay ahead of the curve and achieve your goals, whether you're a seasoned pro
-          or just starting out in the world of web development. With our expert guidance and
-          support, you can unleash your creativity and take your skills to the next level. Join us
-          on this exciting journey, and let's build a brighter future for web development together!"
+          At the core of our vision is the belief that knowledge empowers consumers. We aim to
+          provide transparent and unbiased information about the products we unbox, ensuring that
+          our audience has all the necessary details to make informed choices. Our reviews go beyond
+          the surface-level features and delve deep into the quality, performance, and overall value
+          of each product.
         </Typography>
       </m.div>
     </Container>

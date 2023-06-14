@@ -49,7 +49,7 @@ export default function BlogPostsPage() {
   return (
     <>
       <Head>
-        <title> Blog: Posts | designwithsatya</title>
+        <title> Blog: Posts | UnboxHub</title>
       </Head>
       <Container maxWidth={themeStretch ? false : 'lg'}>
         {/* <AppFeatured list={_appFeatured} /> */}

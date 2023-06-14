@@ -10,36 +10,48 @@ import { MotionViewport, varFade } from '../../components/animate';
 
 const CARDS = [
   {
-    icon: ' /assets/icons/home/ic_make_brand.svg',
-    title: 'Make Brand',
+    icon: ' /assets/icons/home/ic_productunboxing.svg',
+    title: 'Product Unboxing Videos',
     description:
-      'If youre looking for a trusted partner for your web development needs, look no further than Designwithsatya. Contact us today to learn more about how we can help you achieve your online goals.',
+      'Create engaging and informative videos where you unbox different products, showcasing their packaging, contents, and initial impressions.',
   },
   {
-    icon: ' /assets/icons/home/ic_development.svg',
-    title: 'Web Development',
+    icon: ' /assets/icons/home/ic_detailedproductreviews.svg',
+    title: 'Detailed Product Reviews',
     description:
-      'Our team of expert web developers and designers at Designwithsatya offers a wide range of web development services to help businesses succeed online. From responsive design to web application development, we have the expertise to help you achieve your goals.',
+      'Provide comprehensive reviews of the unboxed products, highlighting their features, performance, pros, and cons to help potential customers make informed decisions.',
   },
   {
-    icon: ' /assets/icons/home/ic_figma.svg',
-    title: 'UI/UX Designer',
+    icon: ' /assets/icons/home/ic_productcomparisons.svg',
+    title: 'Product Comparisons',
     description:
-      'Our team of experienced UI/UX designers at Designwithsatya offers customized design solutions that focus on user experience and engagement. From wireframing to prototyping and testing, we provide a full range of design services to help you achieve your goals.',
-  },
-
-  {
-    icon: ' /assets/icons/home/ic_user.png',
-    title: 'Mobile Application',
-    description:
-      'Our mobile application development services at Designwithsatya are designed to help businesses reach their customers on-the-go. We provide end-to-end development solutions, including design, development, testing, and deployment, to help you achieve your mobile goals.',
+      'Conduct side-by-side comparisons of similar products, outlining their differences and helping visitors determine which one suits their needs best.',
   },
 
   {
-    icon: ' /assets/icons/home/ic_seo.png',
-    title: 'SEO',
+    icon: ' /assets/icons/home/ic_expertrecommendations.svg',
+    title: 'Expert Recommendations',
     description:
-      'At Designwithsatya, we provide SEO services to help businesses improve their online visibility and attract more traffic. Our team of experienced professionals uses the latest SEO techniques to ensure that your website ranks well in search engine results,to help you achieve your goals.',
+      'Offer expert recommendations and curated lists of top products in various categories, based on your extensive knowledge and experience.',
+  },
+
+  {
+    icon: ' /assets/icons/home/ic_sponsoredontent.svg',
+    title: 'Sponsored Content',
+    description:
+      'Collaborate with brands to feature sponsored content, where you unbox and review their products, providing exposure and advertising opportunities.',
+  },
+  {
+    icon: ' /assets/icons/home/ic_affiliatemarketing.svg',
+    title: 'Affiliate Marketing',
+    description:
+      'Utilize affiliate marketing by including affiliate links to products you unbox, earning a commission when visitors make purchases through those links.',
+  },
+  {
+    icon: ' /assets/icons/home/ic_exclusivediscounts.svg',
+    title: 'Exclusive Deals and Discounts',
+    description:
+      'Provide exclusive deals, discount codes, or partnerships with brands to offer special offers and savings to your audience.',
   },
 ];
 
@@ -75,7 +87,7 @@ export default function HomeMinimal() {
         >
           <m.div variants={varFade().inUp}>
             <Typography component="div" variant="overline" sx={{ color: 'text.disabled' }}>
-              PortFolio
+              PortFolio UnboxHub
             </Typography>
           </m.div>
 
@@ -84,10 +96,11 @@ export default function HomeMinimal() {
           </m.div>
           <m.div variants={varFade().inUp}>
             <Typography variant="subtitle1">
-              At Designwithsatya, we specialize in creating modern, user-friendly websites that help
-              businesses and organizations achieve their online goals. Our web development solutions
-              are tailored to the unique needs of each client, ensuring that their website meets
-              their specific requirements and objectives.
+              Our goal is to empower you, the consumer, with the knowledge you need to make informed
+              purchasing decisions. We understand that every product represents an investment, and
+              we want to ensure you make the right choice. Whether you're searching for the perfect
+              gift, upgrading your tech arsenal, or simply exploring new products, our website
+              serves as your trusted companion.
             </Typography>
           </m.div>
         </Stack>

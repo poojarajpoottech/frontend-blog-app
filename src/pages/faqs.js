@@ -17,7 +17,7 @@ export default function FaqsPage() {
   return (
     <>
       <Head>
-        <title> Faqs | Designwithsatya</title>
+        <title> Faqs | UnboxHub</title>
       </Head>
 
       <FaqsHero />

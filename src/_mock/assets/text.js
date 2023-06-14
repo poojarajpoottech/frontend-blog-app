@@ -1,27 +1,23 @@
 // ----------------------------------------------------------------------
 
 export const title = [
-  `What types of web development services do you offer?`,
-  `How long does it take to complete a web development project?`,
-  `What is your process for developing a website?`,
-  `Do you offer custom web design services?`,
-  `What platform or technology do you use for web development?`,
-  `How do you ensure that the website is responsive and mobile-friendly?`,
-  `Do you provide website maintenance and support services?`,
-  `Can you help with search engine optimization (SEO)?`,
-  `What is your pricing structure for web development services?`,
-  `How do I get started with a web development project with your company?`,
+  `What is product unboxing?`,
+  `What kind of products do you unbox on your website?`,
+  `How do you select the products for unboxing?`,
+  `Are your unboxing reviews unbiased?`,
+  `Do you receive compensation for featuring products?`,
+  `Can I request a specific product for unboxing?`,
+  `How can I stay updated with your latest unboxing videos and reviews?`,
+  `Can I purchase the products you unbox directly from your website?`,
 ];
 
 export const description = [
-  `We offer a range of web development services including front-end development, back-end development, full-stack development, e-commerce development, content management systems (CMS) development, and more.`,
-  `The time it takes to complete a web development project varies depending on the complexity and scope of the project. We can provide you with a project timeline and estimated completion date during the consultation process.`,
-  `Our web development process involves several stages including discovery, planning, design, development, testing, and launch. We work closely with our clients throughout the process to ensure that their vision and goals are being met.`,
-  `Yes, we offer custom web design services tailored to the unique needs and preferences of our clients..`,
-  `We use a variety of platforms and technologies depending on the specific needs of the project. Some of the technologies we use include HTML, CSS, JavaScript, PHP, Node.js, and more.`,
-  `We design and develop all of our websites to be responsive and mobile-friendly, ensuring that they provide a great user experience across all devices..`,
-  `Yes, we provide website maintenance and support services to ensure that our clients' websites are running smoothly and up-to-date..`,
-  `Yes, we offer search engine optimization (SEO) services to help improve our clients' website visibility and rankings on search engines.ing.`,
-  `Our pricing structure for web development services varies depending on the scope and complexity of the project. We provide transparent and competitive pricing during the consultation process.`,
-  `To get started with a web development project, simply contact us through our website or give us a call. We will schedule a consultation to discuss your project and provide you with a proposal and project timeline.`,
+  `Product unboxing refers to the process of unveiling and exploring a newly purchased or received product. It involves opening the packaging, examining the contents, and sharing the experience with others.`,
+  `We unbox a wide range of products across various categories such as electronics, gadgets, beauty, fashion, home appliances, and more. Our goal is to provide diverse content and cater to different interests and needs.`,
+  `We carefully research and select products based on their popularity, relevance, and consumer demand. We consider factors such as product quality, innovation, customer reviews, and industry trends to ensure we bring you engaging and informative unboxing experiences.`,
+  `Yes, our unboxing reviews are unbiased and based on our genuine experiences and opinions. We strive to provide honest assessments of the products, highlighting their strengths and weaknesses to help you make informed decisions.`,
+  `Yes, we may receive compensation for featuring products on our website. This can be in the form of sponsored content, affiliate partnerships, or collaborations with brands. However, it does not influence our reviews, and we remain committed to providing transparent and objective information.`,
+  `We value your suggestions and feedback. While we cannot guarantee fulfilling every request, we are open to considering product suggestions from our audience. Feel free to reach out to us with your recommendations.`,
+  `To stay updated, you can subscribe to our newsletter, follow us on social media platforms, or regularly visit our website. We regularly post new unboxing videos, reviews, and informative content to keep you informed about the latest products and trends.`,
+  `We provide links to trusted online retailers where you can purchase the products featured on our website. By clicking on these links, you will be redirected to the respective retailer's website for further details and purchase options.`,
 ];

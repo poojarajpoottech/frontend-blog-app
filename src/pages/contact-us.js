@@ -19,7 +19,7 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title> Contact us | Designwithsatya</title>
+        <title> Contact us | UnboxHub</title>
       </Head>
 
       <ContactHero />

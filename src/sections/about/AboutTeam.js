@@ -52,13 +52,13 @@ export default function AboutTeam() {
     <Container component={MotionViewport} sx={{ pb: 10, textAlign: 'center' }}>
       <m.div variants={varFade().inDown}>
         <Typography component="p" variant="overline" sx={{ color: 'text.disabled' }}>
-          Dream team
+          Dream customer
         </Typography>
       </m.div>
 
       <m.div variants={varFade().inUp}>
         <Typography variant="h2" sx={{ my: 3 }}>
-          Great team is the key
+          Great Loyal Customer
         </Typography>
       </m.div>
 
@@ -70,11 +70,11 @@ export default function AboutTeam() {
             color: 'text.secondary',
           }}
         >
-          "At DesignWithSatya, we understand that web development can sometimes be challenging, and
-          that's why we're committed to providing world-class support for all of our readers. If you
-          encounter any problems or have questions about our tutorials or technology, our dedicated
-          support team is here to help. We strive to respond to all inquiries within one business
-          day, so you can get the help you need when you need it!"
+          Introducing UnboxHub, your ultimate destination for unboxing various products and
+          accessing comprehensive information. As a passionate content creator, I am dedicated to
+          providing you with engaging unboxing experiences and valuable insights. With a focus on
+          advertising, I have successfully built a loyal customer base who repeatedly choose our
+          website for their product-related needs.
         </Typography>
       </m.div>
 
@@ -119,7 +119,7 @@ export default function AboutTeam() {
         endIcon={<Iconify icon="ic:round-arrow-right-alt" width={24} />}
         sx={{ mx: 'auto' }}
       >
-        View all team members
+        View all customer members
       </Button>
     </Container>
   );

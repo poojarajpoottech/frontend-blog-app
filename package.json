@@ -1,6 +1,6 @@
 {
-  "name": "@designwithsatya/nextjs",
-  "author": "designwithsatya UI",
+  "name": "@unbox/nextjs",
+  "author": "Satyendra Singh",
   "version": "4.3.0",
   "description": "Next.Js Javascript Version",
   "private": true,

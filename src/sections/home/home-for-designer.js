@@ -26,7 +26,7 @@ export default function HomeForDesigner() {
     <Box sx={{ textAlign: { xs: 'center', md: 'unset' }, mt: { xs: 10, md: 20 } }}>
       <m.div variants={varFade().inUp}>
         <Typography component="div" variant="overline" sx={{ color: 'text.disabled' }}>
-          Professional Designwithsatya
+          Professional UnboxHub
         </Typography>
       </m.div>
 
@@ -41,7 +41,7 @@ export default function HomeForDesigner() {
             ),
           }}
         >
-          For Designer
+          For customers
         </Typography>
       </m.div>
 
@@ -55,7 +55,7 @@ export default function HomeForDesigner() {
           rel="noopener"
           href=""
         >
-          See My Works
+          See My Product Link
         </Button>
       </m.div>
     </Box>

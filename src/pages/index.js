@@ -45,7 +45,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title> The Design With Satya</title>
+        <title>UnboxHub</title>
       </Head>
 
       <ScrollProgress />

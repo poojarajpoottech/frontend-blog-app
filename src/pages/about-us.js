@@ -24,7 +24,7 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title> About us | Designwithsatya</title>
+        <title> About us | UnboxHub</title>
       </Head>
 
       <AboutHero />

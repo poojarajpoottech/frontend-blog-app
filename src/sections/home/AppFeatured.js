@@ -111,7 +111,7 @@ function CarouselItem({ item, isActive }) {
       >
         <m.div variants={varFade().inRight}>
           <Typography variant="overline" component="div" sx={{ opacity: 0.48 }}>
-            DesignWithSatya
+            UnboxHub
           </Typography>
         </m.div>
 

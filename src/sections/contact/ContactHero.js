@@ -10,8 +10,8 @@ import { TextAnimate, MotionContainer, varFade } from '../../components/animate'
 const CONTACTS = [
   {
     country: 'Business enquiry',
-    address: 'Tell us about your next project.',
-    phoneNumber: 'designwithsatyendra@gmail.com',
+    address: 'Tell us about your product.',
+    phoneNumber: 'unboxhub@gmail.com',
   },
   {
     country: 'India',

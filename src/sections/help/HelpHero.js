@@ -57,10 +57,9 @@ export default function HelpHero() {
                 fontWeight: 'fontWeightMedium',
               }}
             >
-              I hope this message finds you well. As a web developer, I am passionate about sharing
-              my knowledge and helping others learn about the field. Recently, I have been working
-              on creating technical tutorials for YouTube and I believe they can be a valuable
-              resource for those looking to improve their skills.
+              Help us reach more people by praising and sharing our website on social media
+              platforms. By recommending our content to your friends, family, and followers, you can
+              help us expand our audience and increase our visibility.
             </Typography>
           </m.div>
         </StyledContent>
