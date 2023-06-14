@@ -3,16 +3,16 @@ import { useState, useEffect } from 'react';
 // next
 import { useRouter } from 'next/router';
 // @mui
-import { List, Drawer, IconButton, Typography } from '@mui/material';
+import { List, Drawer, IconButton } from '@mui/material';
 // config
 import { NAV } from '../../../../config-global';
 // components
+import Logo from '../../../../components/logo';
 import Iconify from '../../../../components/iconify';
 import Scrollbar from '../../../../components/scrollbar';
 //
 import NavList from './NavList';
 import NavHelp from '../NavHelp';
-import { fDate } from '../../../../utils/formatTime';
 
 // ----------------------------------------------------------------------
 
@@ -67,9 +67,8 @@ export default function NavMobile({ isOffset, data }) {
         }}
       >
         <Scrollbar>
-          <Typography variant="subtitle2" sx={{ mx: 2.5, my: 3, textAlign: 'center' }}>
-            Last Update - {fDate(Date())}
-          </Typography>
+          <Logo sx={{ mx: 2.5, my: 3 }} />
+
           <List component="nav" disablePadding>
             {data.map((link) => (
               <NavList key={link.title} item={link} />

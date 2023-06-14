@@ -71,15 +71,6 @@ export default function Header() {
             />
           </IconButton>
 
-          {/* <Button
-            component={NextLink}
-            sx={{ ml: 2 }}
-            variant="contained"
-            rel="noopener"
-            href="/help-us"
-          >
-            Help
-          </Button> */}
           {state ? (
             <Button
               component={NextLink}
