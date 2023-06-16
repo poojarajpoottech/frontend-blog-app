@@ -1,17 +1,11 @@
 // next
 import NextLink from 'next/link';
 import { alpha } from '@mui/material/styles';
-
-import { Box, Grid, Link, Stack, Divider, Container, Typography, IconButton } from '@mui/material';
-// routes
+import { Box, Grid, Link, Stack, Container, Typography, IconButton } from '@mui/material';
 import { PATH_PAGE } from '../../routes/paths';
-// _mock
 import { _socials } from '../../_mock/arrays';
-// components
 import Logo from '../../components/logo';
 import Iconify from '../../components/iconify';
-
-// ----------------------------------------------------------------------
 
 const LINKS = [
   {
@@ -53,8 +47,6 @@ export default function Footer() {
         bgcolor: 'background.default',
       }}
     >
-      <Divider />
-
       <Container sx={{ pt: 10 }}>
         <Grid
           container

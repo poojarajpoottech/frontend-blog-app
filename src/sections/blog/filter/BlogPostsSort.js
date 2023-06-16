@@ -1,40 +1,56 @@
-import PropTypes from 'prop-types';
 // @mui
-import { MenuItem, TextField } from '@mui/material';
+import PropTypes from 'prop-types';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
+// components
+import Iconify from '../../../components/iconify';
+import CustomPopover, { usePopover } from '../../../components/custom-popover';
 
 // ----------------------------------------------------------------------
 
-BlogPostsSort.propTypes = {
+export default function PostSort({ sortBy, sortOptions, onSort }) {
+  const popover = usePopover();
+
+  return (
+    <>
+      <Button
+        disableRipple
+        color="inherit"
+        onClick={popover.onOpen}
+        endIcon={
+          <Iconify
+            icon={popover.open ? 'eva:arrow-ios-upward-fill' : 'eva:arrow-ios-downward-fill'}
+          />
+        }
+        sx={{ fontWeight: 'fontWeightSemiBold', textTransform: 'capitalize' }}
+      >
+        Sort By:
+        <Box component="span" sx={{ ml: 0.5, fontWeight: 'fontWeightBold' }}>
+          {sortBy}
+        </Box>
+      </Button>
+
+      <CustomPopover open={popover.open} onClose={popover.onClose} sx={{ width: 140 }}>
+        {sortOptions.map((option) => (
+          <MenuItem
+            key={option.value}
+            selected={sortBy === option.value}
+            onClick={() => {
+              popover.onClose();
+              onSort(option.value);
+            }}
+          >
+            {option.label}
+          </MenuItem>
+        ))}
+      </CustomPopover>
+    </>
+  );
+}
+
+PostSort.propTypes = {
   onSort: PropTypes.func,
   sortBy: PropTypes.string,
   sortOptions: PropTypes.array,
 };
-
-export default function BlogPostsSort({ sortBy, sortOptions, onSort }) {
-  return (
-    <TextField
-      select
-      size="small"
-      value={sortBy}
-      onChange={onSort}
-      SelectProps={{
-        sx: { typography: 'body2' },
-      }}
-    >
-      {sortOptions.map((option) => (
-        <MenuItem
-          key={option.value}
-          value={option.value}
-          sx={{
-            mx: 1,
-            borderRadius: 0.75,
-            typography: 'body2',
-            textTransform: 'capitalize',
-          }}
-        >
-          {option.label}
-        </MenuItem>
-      ))}
-    </TextField>
-  );
-}

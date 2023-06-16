@@ -74,7 +74,16 @@ export default function MyApp(props) {
       </Head>
 
       <LocalizationProvider dateAdapter={AdapterDateFns}>
-        <SettingsProvider>
+        <SettingsProvider
+          defaultSettings={{
+            themeMode: 'light',
+            themeDirection: 'ltr',
+            themeContrast: 'default',
+            themeLayout: 'vertical',
+            themeColorPresets: 'default',
+            themeStretch: false,
+          }}
+        >
           <MotionLazyContainer>
             <ThemeProvider>
               <ThemeSettings>

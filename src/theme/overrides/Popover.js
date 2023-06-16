@@ -1,3 +1,7 @@
+import { listClasses } from '@mui/material/List';
+//
+import { paper } from '../css';
+
 // ----------------------------------------------------------------------
 
 export default function Popover(theme) {
@@ -5,8 +9,11 @@ export default function Popover(theme) {
     MuiPopover: {
       styleOverrides: {
         paper: {
-          boxShadow: theme.customShadows.dropdown,
-          borderRadius: Number(theme.shape.borderRadius) * 1.5,
+          ...paper({ theme, dropdown: true }),
+          [`& .${listClasses.root}`]: {
+            paddingTop: 0,
+            paddingBottom: 0,
+          },
         },
       },
     },

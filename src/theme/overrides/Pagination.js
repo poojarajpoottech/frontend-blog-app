@@ -1,55 +1,76 @@
 import { alpha } from '@mui/material/styles';
+import { paginationItemClasses } from '@mui/material/PaginationItem';
 
 // ----------------------------------------------------------------------
 
 const COLORS = ['primary', 'secondary', 'info', 'success', 'warning', 'error'];
 
+// ----------------------------------------------------------------------
+
 export default function Pagination(theme) {
   const isLight = theme.palette.mode === 'light';
 
-  const rootStyle = (ownerState) => {
+  const rootStyles = (ownerState) => {
+    const defaultColor = ownerState.color === 'standard';
+
+    const filledVariant = ownerState.variant === 'text';
+
     const outlinedVariant = ownerState.variant === 'outlined';
 
     const softVariant = ownerState.variant === 'soft';
 
     const defaultStyle = {
-      '& .MuiPaginationItem-root': {
+      [`& .${paginationItemClasses.root}`]: {
         ...(outlinedVariant && {
-          borderColor: alpha(theme.palette.grey[500], 0.32),
+          borderColor: alpha(theme.palette.grey[500], 0.24),
         }),
-        '&.Mui-selected': {
-          fontWeight: theme.typography.fontWeightMedium,
+
+        [`&.${paginationItemClasses.selected}`]: {
+          fontWeight: theme.typography.fontWeightSemiBold,
+          ...(outlinedVariant && {
+            borderColor: 'currentColor',
+          }),
+
+          ...(defaultColor && {
+            backgroundColor: alpha(theme.palette.grey[500], 0.08),
+            ...(filledVariant && {
+              color: isLight ? theme.palette.common.white : theme.palette.grey[800],
+              backgroundColor: theme.palette.text.primary,
+              '&:hover': {
+                backgroundColor: isLight ? theme.palette.grey[700] : theme.palette.grey[100],
+              },
+            }),
+          }),
         },
       },
     };
 
     const colorStyle = COLORS.map((color) => ({
       ...(ownerState.color === color && {
-        ...(softVariant && {
-          '& .MuiPaginationItem-root': {
-            '&.Mui-selected': {
-              color: theme.palette[color][isLight ? 'dark' : 'light'],
-              backgroundColor: alpha(theme.palette[color].main, 0.16),
-              '&:hover': {
-                backgroundColor: alpha(theme.palette[color].main, 0.32),
-              },
-            },
+        [`& .${paginationItemClasses.root}`]: {
+          [`&.${paginationItemClasses.selected}`]: {
+            ...(ownerState.color === color && {
+              // SOFT
+              ...(softVariant && {
+                color: theme.palette[color][isLight ? 'dark' : 'light'],
+                backgroundColor: alpha(theme.palette[color].main, 0.08),
+                '&:hover': {
+                  backgroundColor: alpha(theme.palette[color].main, 0.16),
+                },
+              }),
+            }),
           },
-        }),
+        },
       }),
     }));
 
-    return [...colorStyle, defaultStyle];
+    return [defaultStyle, ...colorStyle];
   };
 
   return {
     MuiPagination: {
-      defaultProps: {
-        color: 'primary',
-      },
-
       styleOverrides: {
-        root: ({ ownerState }) => rootStyle(ownerState),
+        root: ({ ownerState }) => rootStyles(ownerState),
       },
     },
   };

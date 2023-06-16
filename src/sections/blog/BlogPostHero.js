@@ -1,105 +1,110 @@
 import PropTypes from 'prop-types';
-// @mui
-import { alpha, styled } from '@mui/material/styles';
-import { Box, Typography, Avatar } from '@mui/material';
-
-// utils
+import { alpha, useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Avatar from '@mui/material/Avatar';
+import Container from '@mui/material/Container';
+import SpeedDial from '@mui/material/SpeedDial';
+import Typography from '@mui/material/Typography';
+import ListItemText from '@mui/material/ListItemText';
+import SpeedDialAction from '@mui/material/SpeedDialAction';
+import { _socials } from '../../_mock/arrays';
+import useResponsive from '../../hooks/useResponsive';
 import { fDate } from '../../utils/formatTime';
-// _mock
-
+import { bgGradient } from '../../theme/css';
 // components
-import Image from '../../components/image';
-
-// ----------------------------------------------------------------------
-
-const StyledOverlay = styled('div')(({ theme }) => ({
-  top: 0,
-  right: 0,
-  bottom: 0,
-  left: 0,
-  zIndex: 9,
-  position: 'absolute',
-  backgroundColor: alpha(theme.palette.grey[900], 0.64),
-}));
-
-const StyledTitle = styled('h1')(({ theme }) => ({
-  ...theme.typography.h3,
-  top: 0,
-  zIndex: 10,
-  width: '100%',
-  position: 'absolute',
-  padding: theme.spacing(3),
-  color: theme.palette.common.white,
-  [theme.breakpoints.up('md')]: {
-    ...theme.typography.h2,
-    padding: theme.spacing(5),
-  },
-  [theme.breakpoints.up('lg')]: {
-    padding: theme.spacing(10),
-  },
-}));
-
-const StyledFooter = styled('div')(({ theme }) => ({
-  bottom: 0,
-  zIndex: 10,
-  width: '100%',
-  display: 'flex',
-  position: 'absolute',
-  alignItems: 'flex-end',
-  paddingLeft: theme.spacing(3),
-  paddingRight: theme.spacing(2),
-  paddingBottom: theme.spacing(3),
-  justifyContent: 'space-between',
-  [theme.breakpoints.up('sm')]: {
-    alignItems: 'center',
-    paddingRight: theme.spacing(3),
-  },
-  [theme.breakpoints.up('lg')]: {
-    padding: theme.spacing(10),
-  },
-}));
-
-// ----------------------------------------------------------------------
+import Iconify from '../../components/iconify';
 
 BlogPostHero.propTypes = {
   post: PropTypes.object,
 };
 
 export default function BlogPostHero({ post }) {
-  const { cover, title, author, createdAt } = post;
+  const { cover, title, createdAt } = post;
+  const theme = useTheme();
 
+  const smUp = useResponsive('up', 'sm');
   return (
     <Box
       sx={{
+        height: 480,
         overflow: 'hidden',
-        position: 'relative',
-        borderRadius: {
-          xs: `16px 16px 16px 16px`,
-          md: `16px 16px 0 0`,
-        },
+        ...bgGradient({
+          imgUrl: cover,
+          startColor: `${alpha(theme.palette.grey[900], 0.64)} 0%`,
+          endColor: `${alpha(theme.palette.grey[900], 0.64)} 100%`,
+        }),
       }}
     >
-      <StyledTitle>{title}</StyledTitle>
+      <Container sx={{ height: 1, position: 'relative' }}>
+        <Typography
+          variant="h3"
+          component="h1"
+          sx={{
+            zIndex: 9,
+            color: 'common.white',
+            position: 'absolute',
+            maxWidth: 480,
+            pt: { xs: 2, md: 8 },
+          }}
+        >
+          {title}
+        </Typography>
 
-      <StyledFooter>
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Avatar alt="" src="" sx={{ width: 48, height: 48 }} />
+        <Stack
+          sx={{
+            left: 0,
+            width: 1,
+            bottom: 0,
+            position: 'absolute',
+          }}
+        >
+          <Stack
+            direction="row"
+            alignItems="center"
+            sx={{
+              px: { xs: 2, md: 3 },
+              pb: { xs: 3, md: 8 },
+            }}
+          >
+            <Avatar
+              alt="Satyendra Singh"
+              src="/assets/images/about/me.jpg"
+              sx={{ width: 64, height: 64, mr: 2 }}
+            />
 
-          <Box sx={{ ml: 2 }}>
-            <Typography variant="subtitle1" sx={{ color: 'common.white' }}>
-              {author.name}
-            </Typography>
+            <ListItemText
+              sx={{ color: 'common.white' }}
+              primary="Satyendra Singh"
+              secondary={fDate(createdAt)}
+              primaryTypographyProps={{ typography: 'subtitle1', mb: 0.5 }}
+              secondaryTypographyProps={{ color: 'inherit', sx: { opacity: 0.64 } }}
+            />
+          </Stack>
 
-            <Typography variant="body2" sx={{ color: 'grey.500' }}>
-              {fDate(createdAt)}
-            </Typography>
-          </Box>
-        </Box>
-      </StyledFooter>
-
-      <StyledOverlay />
-
-      <Image alt="cover" src={cover} ratio="16/9" />
+          <SpeedDial
+            direction={smUp ? 'left' : 'up'}
+            ariaLabel="Share post"
+            icon={<Iconify icon="solar:share-bold" />}
+            FabProps={{ size: 'medium' }}
+            sx={{
+              position: 'absolute',
+              bottom: { xs: 32, md: 64 },
+              right: { xs: 23, md: -2 },
+            }}
+          >
+            {_socials.map((action) => (
+              <SpeedDialAction
+                key={action.name}
+                icon={<Iconify icon={action.icon} sx={{ color: action.color }} />}
+                tooltipTitle={action.name}
+                tooltipPlacement="top"
+                FabProps={{ color: 'default' }}
+              />
+            ))}
+          </SpeedDial>
+        </Stack>
+      </Container>
     </Box>
   );
 }

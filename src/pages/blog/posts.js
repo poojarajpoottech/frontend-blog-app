@@ -1,7 +1,8 @@
 import orderBy from 'lodash/orderBy';
 import React, { useState, useCallback, useEffect } from 'react';
 import Head from 'next/head';
-import { Button, Grid, Container, Stack, Pagination, Typography } from '@mui/material';
+import { Button, Grid, Container, Stack, Typography } from '@mui/material';
+import Pagination, { paginationClasses } from '@mui/material/Pagination';
 
 import { SkeletonPostItem } from '../../components/skeleton';
 
@@ -11,9 +12,6 @@ import Iconify from '../../components/iconify';
 import MainLayout from '../../layouts/main';
 import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../../sections/blog';
 import axios from '../../utils/axios';
-
-// import { AppFeatured } from '../../sections/home';
-// import UserProfilePage from './profile';
 
 const SORT_OPTIONS = [
   { value: 'latest', label: 'Latest' },
@@ -52,8 +50,6 @@ export default function BlogPostsPage() {
         <title> Blog: Posts | UnboxHub</title>
       </Head>
       <Container maxWidth={themeStretch ? false : 'lg'}>
-        {/* <AppFeatured list={_appFeatured} /> */}
-        {/* <UserProfilePage /> */}
         <Typography
           variant="h4"
           sx={{
@@ -62,32 +58,6 @@ export default function BlogPostsPage() {
         >
           Blog
         </Typography>
-        {/* <CustomBreadcrumbs
-          heading="Blog"
-          links={[
-            {
-              name: 'Home',
-              href: '/',
-            },
-            {
-              name: 'Blog',
-              href: '/blog/posts',
-            },
-            {
-              name: 'Posts',
-            },
-          ]}
-          action={
-            <Button
-              component={NextLink}
-              href={PATH_DASHBOARD.blog.new}
-              variant="contained"
-              startIcon={<Iconify icon="eva:plus-fill" />}
-            >
-              New Post
-            </Button>
-          }
-        /> */}
 
         <Stack mb={5} direction="row" alignItems="center" justifyContent="space-between">
           <BlogPostsSearch />
@@ -126,9 +96,10 @@ export default function BlogPostsPage() {
           <Pagination
             count={posts.length}
             sx={{
-              my: 5,
-              ml: 0,
-              mr: { xs: 'auto', md: 0 },
+              mb: 8,
+              [`& .${paginationClasses.ul}`]: {
+                justifyContent: 'center',
+              },
             }}
           />
         </Stack>
