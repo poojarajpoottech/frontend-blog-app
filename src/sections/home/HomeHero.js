@@ -22,8 +22,8 @@ import { MotionContainer, varFade } from '../../components/animate';
 
 const StyledRoot = styled('div')(({ theme }) => ({
   ...bgGradient({
-    color: alpha(theme.palette.background.default, theme.palette.mode === 'light' ? 0.5 : 1.94),
-    imgUrl: '/assets/background/overlay_3.jpg',
+    color: alpha(theme.palette.background.default, theme.palette.mode === 'light' ? 0.9 : 0.94),
+    // imgUrl: '/assets/background/overlay_3.jpg',
   }),
   width: '100%',
   height: '100vh',
@@ -34,6 +34,12 @@ const StyledRoot = styled('div')(({ theme }) => ({
     position: 'fixed',
   },
 }));
+const VideoBackground = styled('video')({
+  position: 'absolute',
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+});
 const StyledDescription = styled('div')(({ theme }) => ({
   margin: 'auto',
   display: 'flex',
@@ -47,6 +53,7 @@ const StyledDescription = styled('div')(({ theme }) => ({
 }));
 
 const StyledWrapper = styled('div')(({ theme }) => ({
+  color: theme.palette.common.white,
   height: '100%',
   overflow: 'hidden',
   position: 'relative',
@@ -151,7 +158,7 @@ export default function HomeHero() {
       </m.div>
 
       <m.div variants={varFade().in}>
-        <Typography variant="h6" sx={{ textAlign: 'center', maxWidth: '800px' }}>
+        <Typography variant="h5" sx={{ textAlign: 'center', maxWidth: '800px' }}>
           &quot;Unveiling the Best Products for You.&quot;
         </Typography>
       </m.div>
@@ -168,7 +175,7 @@ export default function HomeHero() {
           ABOUT ME
         </StyledTextGradient>
       </m.div>
-      <Stack spacing={1.5} direction={{ xs: 'row', sm: 'row' }} sx={{ mb: 5 }}>
+      <Stack spacing={1.5} direction={{ xs: 'row', sm: 'row' }} sx={{ mb: 3 }}>
         <Typography variant="h6" sx={{ color: '#00AB55' }}>
           This Website is For
         </Typography>
@@ -242,6 +249,10 @@ export default function HomeHero() {
           }),
         }}
       >
+        <VideoBackground autoPlay loop muted>
+          <source src="/assets/background/homevideo.mp4" type="video/mp4" />
+        </VideoBackground>
+
         <StyledWrapper>
           <Container component={MotionContainer} sx={{ height: 1 }}>
             <Grid container columnSpacing={{ md: 10 }} sx={{ height: 1 }}>
