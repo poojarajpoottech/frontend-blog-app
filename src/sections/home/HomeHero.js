@@ -22,8 +22,8 @@ import { MotionContainer, varFade } from '../../components/animate';
 
 const StyledRoot = styled('div')(({ theme }) => ({
   ...bgGradient({
-    color: alpha(theme.palette.background.default, theme.palette.mode === 'light' ? 0.9 : 0.94),
-    // imgUrl: '/assets/background/overlay_3.jpg',
+    color: alpha(theme.palette.background.default, theme.palette.mode === 'light' ? 0 : 0.94),
+    imgUrl: '/assets/background/home_bg.svg',
   }),
   width: '100%',
   height: '100vh',
@@ -34,12 +34,12 @@ const StyledRoot = styled('div')(({ theme }) => ({
     position: 'fixed',
   },
 }));
-const VideoBackground = styled('video')({
-  position: 'absolute',
-  width: '100%',
-  height: '100%',
-  objectFit: 'cover',
-});
+// const VideoBackground = styled('video')({
+//   position: 'absolute',
+//   width: '100%',
+//   height: '100%',
+//   objectFit: 'cover',
+// });
 const StyledDescription = styled('div')(({ theme }) => ({
   margin: 'auto',
   display: 'flex',
@@ -159,7 +159,8 @@ export default function HomeHero() {
 
       <m.div variants={varFade().in}>
         <Typography variant="h5" sx={{ textAlign: 'center', maxWidth: '800px' }}>
-          &quot;Unveiling the Best Products for You.&quot;
+          &quot;Unbox the best products and discover captivating advertisements on our website,
+          where innovation meets excitement. Join the experience now!&quot;
         </Typography>
       </m.div>
       <m.div variants={varFade().in}>
@@ -212,7 +213,7 @@ export default function HomeHero() {
         ))}
       </Stack>
 
-      <Stack spacing={2} sx={{ textAlign: 'center', opacity: 0.8 }}>
+      <Stack spacing={1} sx={{ textAlign: 'center', opacity: 0.8 }}>
         <m.div variants={varFade().in}>
           <Typography variant="overline">Available For</Typography>
         </m.div>
@@ -249,9 +250,9 @@ export default function HomeHero() {
           }),
         }}
       >
-        <VideoBackground autoPlay loop muted>
+        {/* <VideoBackground autoPlay loop muted>
           <source src="/assets/background/homevideo.mp4" type="video/mp4" />
-        </VideoBackground>
+        </VideoBackground> */}
 
         <StyledWrapper>
           <Container component={MotionContainer} sx={{ height: 1 }}>
