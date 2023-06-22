@@ -1,6 +1,4 @@
 import PropTypes from 'prop-types';
-// next
-import Head from 'next/head';
 import { Box, Stack, Button, Typography, InputAdornment } from '@mui/material';
 // hooks
 import useCountdown from '../hooks/useCountdown';
@@ -10,6 +8,7 @@ import CompactLayout from '../layouts/compact';
 import { CustomTextField } from '../components/custom-input';
 // assets
 import { ComingSoonIllustration } from '../assets/illustrations';
+import HeadTitle from '../components/HeadTitle';
 
 // ----------------------------------------------------------------------
 
@@ -22,9 +21,7 @@ export default function ComingSoonPage() {
 
   return (
     <>
-      <Head>
-        <title> Coming Soon | UnboxHub</title>
-      </Head>
+      <HeadTitle title="Commingsoon" />
 
       <Typography variant="h3" paragraph>
         Coming Soon!

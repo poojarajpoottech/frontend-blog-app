@@ -1,12 +1,6 @@
 import { useState } from 'react';
-// next
-import Head from 'next/head';
-// @mui
 import { Tab, Tabs, Box } from '@mui/material';
-// routes
-// import { PATH_DASHBOARD } from '../../routes/paths';
-
-// layouts
+import HeadTitle from '../../components/HeadTitle';
 import MainLayout from '../../layouts/main';
 // components
 import Iconify from '../../components/iconify';
@@ -93,9 +87,7 @@ export default function UserProfilePage() {
 
   return (
     <>
-      <Head>
-        <title> User: Profile | Minimal UI</title>
-      </Head>
+      <HeadTitle title=" User: Profile" />
 
       <Tabs
         value={currentTab}

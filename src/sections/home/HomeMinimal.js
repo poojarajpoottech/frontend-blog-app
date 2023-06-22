@@ -87,7 +87,7 @@ export default function HomeMinimal() {
         >
           <m.div variants={varFade().inUp}>
             <Typography component="div" variant="overline" sx={{ color: 'text.disabled' }}>
-              PortFolio UnboxHub
+              PortFolio TechhubAI
             </Typography>
           </m.div>
 
@@ -96,11 +96,11 @@ export default function HomeMinimal() {
           </m.div>
           <m.div variants={varFade().inUp}>
             <Typography variant="subtitle1">
-              Our goal is to empower you, the consumer, with the knowledge you need to make informed
-              purchasing decisions. We understand that every product represents an investment, and
-              we want to ensure you make the right choice. Whether you're searching for the perfect
-              gift, upgrading your tech arsenal, or simply exploring new products, our website
-              serves as your trusted companion.
+              We understand that learning is a continuous process, so we encourage you to explore
+              our website regularly as we update our content to reflect the ever-evolving landscape
+              of AI and frontend skills. Our aim is to provide you with a comprehensive and
+              enriching learning experience that empowers you to excel in your personal and
+              professional endeavors.
             </Typography>
           </m.div>
         </Stack>

@@ -21,7 +21,7 @@ const CheckoutPage = () => {
       key: 'YOUR_RAZORPAY_KEY',
       amount,
       currency,
-      name: 'UnboxHub',
+      name: 'TechHubAI',
       description: 'Payment for sorce code',
       order_id: orderId,
       async handler() {

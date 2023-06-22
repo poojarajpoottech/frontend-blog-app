@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
@@ -14,6 +13,7 @@ import {
   YouTubeVideo,
 } from '../sections/home';
 import HomeForDesigner from '../sections/home/home-for-designer';
+import HeadTitle from '../components/HeadTitle';
 
 // ----------------------------------------------------------------------
 
@@ -44,9 +44,7 @@ const StyledPolygon = styled('div')(({ anchor = 'top', theme }) => ({
 export default function HomePage() {
   return (
     <>
-      <Head>
-        <title>UnboxHub</title>
-      </Head>
+      <HeadTitle title="Homepage" />
 
       <ScrollProgress />
 

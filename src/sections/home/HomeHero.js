@@ -1,21 +1,20 @@
 import { m, useScroll } from 'framer-motion';
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { styled, alpha } from '@mui/material/styles';
-import { IconButton, Box } from '@mui/material';
+import { Box } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typewriter from 'typewriter-effect';
-import { _socials } from '../../_mock/arrays';
-import Iconify from '../../components/iconify';
 
 // theme
 import { textGradient, bgGradient, bgBlur } from '../../theme/css';
 import { secondaryFont } from '../../theme/typography';
 // layouts
 import { HEADER } from '../../layouts/config-layout';
-import SvgColor from '../../components/svg-color-homepage';
+import SvgColor from '../../components/svg-color';
+
 import { MotionContainer, varFade } from '../../components/animate';
 
 // ----------------------------------------------------------------------
@@ -73,7 +72,7 @@ const StyledTextGradient = styled(m.h1)(({ theme }) => ({
   lineHeight: 1,
   textAlign: 'center',
   backgroundSize: '400%',
-  fontSize: `${74 / 45}rem`,
+  fontSize: `${74 / 30}rem`,
   fontFamily: secondaryFont.style.fontFamily,
   [theme.breakpoints.up('md')]: {
     fontSize: `${96 / 20}rem`,
@@ -153,14 +152,14 @@ export default function HomeHero() {
             repeat: Infinity,
           }}
         >
-          WELCOME TO UnBoxHub
+          WELCOME TO TECHHUBAI
         </StyledTextGradient>
       </m.div>
 
       <m.div variants={varFade().in}>
         <Typography variant="h5" sx={{ textAlign: 'center', maxWidth: '800px' }}>
-          &quot;Unbox the best products and discover captivating advertisements on our website,
-          where innovation meets excitement. Join the experience now!&quot;
+          &quot;Welcome to our dynamic website dedicated to exploring the exciting realms of
+          frontend programming, AI, ChatGPT, and the latest advancements in technology!&quot;
         </Typography>
       </m.div>
       <m.div variants={varFade().in}>
@@ -176,7 +175,7 @@ export default function HomeHero() {
           ABOUT ME
         </StyledTextGradient>
       </m.div>
-      <Stack spacing={1.5} direction={{ xs: 'row', sm: 'row' }} sx={{ mb: 3 }}>
+      <Stack spacing={1.5} direction={{ xs: 'row', sm: 'row' }} sx={{ mb: 2 }}>
         <Typography variant="h6" sx={{ color: '#00AB55' }}>
           This Website is For
         </Typography>
@@ -184,11 +183,11 @@ export default function HomeHero() {
           <Typewriter
             options={{
               strings: [
-                'Unboxing Product',
-                'Recommendations',
-                'Information',
+                'Mern Developer',
+                'AI,ChatGPT',
+                'Web Designer',
                 'Latest Updates',
-                'Advertising',
+                'YouTuber',
               ],
               autoStart: true,
               loop: true,
@@ -197,29 +196,13 @@ export default function HomeHero() {
           />
         </Typography>
       </Stack>
-      <Stack spacing={1} alignItems="center" justifyContent="center" direction="row">
-        {_socials.map((social) => (
-          <IconButton
-            key={social.name}
-            sx={{
-              color: social.color,
-              '&:hover': {
-                bgcolor: alpha(social.color, 0.08),
-              },
-            }}
-          >
-            <Iconify icon={social.icon} />
-          </IconButton>
-        ))}
-      </Stack>
-
-      <Stack spacing={1} sx={{ textAlign: 'center', opacity: 0.8 }}>
+      <Stack spacing={3} sx={{ textAlign: 'center', opacity: 0.48 }}>
         <m.div variants={varFade().in}>
           <Typography variant="overline">Available For</Typography>
         </m.div>
 
         <Stack spacing={2} direction="row" justifyContent="center">
-          {['myntra', 'flipkart', 'meesho', 'amazon'].map((platform) => (
+          {['sketch', 'figma', 'js', 'ts', 'nextjs'].map((platform) => (
             <m.div key={platform} variants={varFade().in}>
               <SvgColor src={`/assets/icons/platforms/ic_${platform}.svg`} />
             </m.div>

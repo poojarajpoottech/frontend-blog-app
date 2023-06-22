@@ -52,13 +52,13 @@ export default function AboutTeam() {
     <Container component={MotionViewport} sx={{ pb: 10, textAlign: 'center' }}>
       <m.div variants={varFade().inDown}>
         <Typography component="p" variant="overline" sx={{ color: 'text.disabled' }}>
-          Dream customer
+          Dream Team
         </Typography>
       </m.div>
 
       <m.div variants={varFade().inUp}>
         <Typography variant="h2" sx={{ my: 3 }}>
-          Great Loyal Customer
+          Great Team
         </Typography>
       </m.div>
 
@@ -70,11 +70,10 @@ export default function AboutTeam() {
             color: 'text.secondary',
           }}
         >
-          Introducing UnboxHub, your ultimate destination for unboxing various products and
-          accessing comprehensive information. As a passionate content creator, I am dedicated to
-          providing you with engaging unboxing experiences and valuable insights. With a focus on
-          advertising, I have successfully built a loyal customer base who repeatedly choose our
-          website for their product-related needs.
+          Each member of our Great Team brings unique skills, knowledge, and experiences to the
+          table. From AI researchers and developers to frontend designers and educators, we have a
+          diverse group of individuals who are committed to delivering high-quality videos and blogs
+          that cater to the varying needs and interests of our audience.
         </Typography>
       </m.div>
 

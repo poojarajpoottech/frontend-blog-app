@@ -1,5 +1,4 @@
 import { useEffect, useState, useCallback } from 'react';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Stack, Container, Typography, Box, Button } from '@mui/material';
 import { PATH_DASHBOARD } from '../../../routes/paths';
@@ -11,6 +10,7 @@ import { SkeletonPostDetails } from '../../../components/skeleton';
 import { BlogPostHero, BlogPostCard } from '../../../sections/blog';
 import Iconify from '../../../components/iconify';
 import EmptyContent from '../../../components/empty-content';
+import HeadTitle from '../../../components/HeadTitle';
 
 BlogPostPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
@@ -152,10 +152,7 @@ export default function BlogPostPage() {
 
   return (
     <>
-      <Head>
-        <title>{`Blog: ${post?.title || ''} | UnboxHub`}</title>
-      </Head>
-      {/* {errorMsg && !loadingPost && <Typography variant="h6">404 {errorMsg}</Typography>} */}
+      <HeadTitle title={`Blog: ${post?.title || ''} | DWS`} />
       {loadingPost ? SkeletonPostDetails : <>{errorMsg ? renderError : renderPost}</>}
 
       <Container sx={{ pb: 15 }}>{!!recentPosts.length && renderLatestPosts}</Container>

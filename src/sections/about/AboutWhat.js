@@ -76,7 +76,7 @@ export default function AboutWhat() {
           <Grid item xs={12} md={6} lg={5}>
             <m.div variants={varFade().inRight}>
               <Typography variant="h2" sx={{ mb: 3 }}>
-                What is UnboxHub?
+                What is TechHubAI?
               </Typography>
             </m.div>
 
@@ -86,11 +86,10 @@ export default function AboutWhat() {
                   color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                 }}
               >
-                At UnboxHub, we pride ourselves on delivering captivating unboxing journeys. Our
-                team of passionate experts meticulously unbox a diverse range of products, including
-                gadgets, electronics, fashion items, beauty products, and more. With each unboxing,
-                we provide you with an up-close look at the product's design, features, and
-                functionality, allowing you to truly visualize and understand what it offers.
+                TechHubAI is an innovative and dynamic online platform dedicated to exploring the
+                realms of technology, specifically focusing on AI (Artificial Intelligence) and
+                frontend skills. We are passionate about providing valuable resources, knowledge,
+                and a supportive community for individuals interested in these exciting fields.
               </Typography>
             </m.div>
 
@@ -109,7 +108,7 @@ export default function AboutWhat() {
                 size="large"
                 endIcon={<Iconify icon="ic:round-arrow-right-alt" width={24} />}
               >
-                Check out our Unboxing
+                Check out our Blogs
               </Button>
             </m.div>
           </Grid>

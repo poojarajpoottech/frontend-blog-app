@@ -16,40 +16,40 @@ import { MotionViewport, varFade } from '../../components/animate';
 
 const TESTIMONIALS = [
   {
-    name: 'Ailesh Kumar',
+    name: 'Enthusiastic Learners',
     rating: 5,
     dateCreate: new Date(),
-    content: `Excellent Work! Thanks a lot!`,
+    content: `Empowering knowledge seekers with AI and frontend skills exploration.`,
   },
   {
-    name: 'Abhik Patra',
+    name: 'AI Enthusiasts',
     rating: 5,
     dateCreate: new Date(),
-    content: `Bhai maine kharida hai apke website ke link se achha product tha.Thanks a lot!`,
+    content: `Inspiring AI enthusiasts with insightful content and latest advancements.`,
   },
   {
-    name: 'prabhakar dixit',
+    name: 'Frontend Developers',
     rating: 5,
     dateCreate: new Date(),
-    content: `Dude, your website design is really good. It's clear that you have added links to your website very well, which makes it very easy to buy products.`,
+    content: `Empowering frontend developers with valuable resources and career support.`,
   },
   {
-    name: 'Pratibha Rajpoot',
+    name: 'Tech Enthusiasts',
     rating: 4,
     dateCreate: new Date(),
-    content: `Amazing, really good code quality and gives you a lot of examples.`,
+    content: `Engaging technology enthusiasts with AI and frontend insights.`,
   },
   {
-    name: 'Venkatarami V. Reddy',
+    name: 'Career Switchers',
     rating: 4,
     dateCreate: new Date(),
-    content: `Got a few questions after purchasing the product. The owner responded very fast and very helpfull. Overall works very good. 5/5 stars!`,
+    content: `Guiding career switchers in AI and frontend transition journey.`,
   },
   {
-    name: 'Pramod Kumar',
+    name: 'Students and Educators',
     rating: 2,
     dateCreate: new Date(),
-    content: `Thank you bhai, Super washing machine!`,
+    content: `Supporting students and educators with practical learning resources.`,
   },
 ];
 
@@ -104,12 +104,9 @@ export default function AboutTestimonials() {
 
               <m.div variants={varFade().inUp}>
                 <Typography sx={{ color: 'common.white' }}>
-                  If you are someone who loves staying up-to-date with the latest product releases,
-                  enjoys the anticipation of unboxing a new gadget or fashion item, and values
-                  informed decision-making, then UnboxHub is the perfect platform for you. We
-                  understand your desire to explore products beyond the surface, dive deep into
-                  their features and functionality, and gain comprehensive knowledge to make
-                  confident choices.
+                  Our work at TechHubAI is appreciated and loved by a diverse community of
+                  individuals who are passionate about life learning, AI, and frontend skills. Here
+                  are some groups of people who find value and enjoyment in what we offer:
                 </Typography>
               </m.div>
 

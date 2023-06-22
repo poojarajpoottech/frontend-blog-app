@@ -22,6 +22,9 @@ export const PATH_PAGE = {
   loginUnprotected: '/auth/login-unprotected',
   logout: '/auth/logout-user',
   HomePricingPlans: '/HomePricingPlans',
+  experincehero: '/experince',
+  certificatehero: '/certificat',
+  projectp: '/project',
 };
 export const PATH_DASHBOARD = {
   root: ROOTS_DASHBOARD,

@@ -22,28 +22,25 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content={palette('light').primary.main} />
 
           {/* Favicon */}
-          <link rel="apple-touch-icon" sizes="180x180" href="/favicon/mylogo.avif" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon/mylogo.avif" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon/mylogo.avif" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/favicon/mylogo.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon/mylogo.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon/mylogo.png" />
 
           {/* Emotion */}
           <meta name="emotion-insertion-point" content="" />
           {this.props.emotionStyleTags}
 
           {/* Meta */}
-
           <meta
             name="description"
-            content="Welcome to UnboxHub, the ultimate destination for product unboxing and in-depth information. Explore our extensive collection of unboxing videos and detailed reviews, where we unravel the excitement of unboxing various products across different categories. From gadgets and electronics to beauty and fashion, we provide unbiased insights, pros and cons, and valuable recommendations to help you make informed purchasing decisions. Discover the latest trends, compare products side by side, and gain expert insights into the best products on the market. Join our vibrant community of unboxing enthusiasts and stay updated with the hottest releases and exclusive deals. Get ready to experience the thrill of unboxing and unlock a world of product knowledge at UnboxHub"
+            content="Explore the world of frontend programming, AI, ChatGPT, and stay updated with the latest technological advancements. Discover insightful articles, tutorials, and videos that empower developers and enthusiasts in the ever-evolving tech landscape."
           />
           <meta
             name="keywords"
-            content="Product unboxing,Unboxing reviews,Product reviews,Unboxing videos,Product information,Best product unboxing,Unboxing experience,Product specifications,Honest product reviews,Unboxing guide,Unboxing tutorials,Unboxing tips,Latest product releases,Top product recommendations,Unboxing insights,Comparative product analysis,Popular product unboxing,Unboxing enthusiasts,Unboxing community,Unboxing trends"
+            content="frontend programming, AI, ChatGPT, technology, latest advancements, web development, programming tutorials, artificial intelligence, machine learning, natural language processing"
           />
-          <meta
-            name="keywords"
-            content="Product unboxing,Unboxing reviews,Product reviews,Unboxing videos,Product information,Best product unboxing,Unboxing experience,Product specifications,Honest product reviews,Unboxing guide,Unboxing tutorials,Unboxing tips,Latest product releases,Top product recommendations,Unboxing insights,Comparative product analysis,Popular product unboxing,Unboxing enthusiasts,Unboxing community,Unboxing trends"
-          />
+          <meta name="author" content="TechHubAI" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Head>
 
         <body>

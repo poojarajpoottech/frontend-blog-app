@@ -32,9 +32,9 @@ const navConfig = [
         subheader: 'Other',
         items: [
           { title: 'FAQs', path: PATH_PAGE.faqs },
-          { title: 'Experience', path: PATH_PAGE.comingSoon },
-          { title: 'Projects', path: PATH_PAGE.comingSoon },
-          { title: 'Certificates', path: PATH_PAGE.comingSoon },
+          { title: 'Experience', path: PATH_PAGE.experincehero },
+          { title: 'Projects', path: PATH_PAGE.projectp },
+          { title: 'Certificates', path: PATH_PAGE.certificatehero },
         ],
       },
       {

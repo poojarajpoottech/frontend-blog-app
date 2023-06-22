@@ -1,6 +1,3 @@
-// next
-import Head from 'next/head';
-// @mui
 import { Container, Box } from '@mui/material';
 // layouts
 import MainLayout from '../layouts/main';
@@ -8,6 +5,7 @@ import MainLayout from '../layouts/main';
 import { _mapContact } from '../_mock/arrays';
 // sections
 import { ContactHero, ContactForm, ContactMap } from '../sections/contact';
+import HeadTitle from '../components/HeadTitle';
 
 // ----------------------------------------------------------------------
 
@@ -18,9 +16,7 @@ ContactPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 export default function ContactPage() {
   return (
     <>
-      <Head>
-        <title> Contact us | UnboxHub</title>
-      </Head>
+      <HeadTitle title="Contact US" />
 
       <ContactHero />
 

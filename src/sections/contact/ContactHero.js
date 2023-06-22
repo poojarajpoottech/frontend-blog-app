@@ -11,7 +11,7 @@ const CONTACTS = [
   {
     country: 'Business enquiry',
     address: 'Tell us about your product.',
-    phoneNumber: 'unboxhub@gmail.com',
+    phoneNumber: 'TechHubAI@gmail.com',
   },
   {
     country: 'India',

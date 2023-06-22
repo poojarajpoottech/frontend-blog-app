@@ -1,6 +1,5 @@
 import orderBy from 'lodash/orderBy';
 import React, { useState, useCallback, useEffect } from 'react';
-import Head from 'next/head';
 import { Button, Grid, Container, Stack, Typography } from '@mui/material';
 import Pagination, { paginationClasses } from '@mui/material/Pagination';
 
@@ -12,6 +11,7 @@ import Iconify from '../../components/iconify';
 import MainLayout from '../../layouts/main';
 import { BlogPostCard, BlogPostsSort, BlogPostsSearch } from '../../sections/blog';
 import axios from '../../utils/axios';
+import HeadTitle from '../../components/HeadTitle';
 
 const SORT_OPTIONS = [
   { value: 'latest', label: 'Latest' },
@@ -46,9 +46,7 @@ export default function BlogPostsPage() {
 
   return (
     <>
-      <Head>
-        <title> Blog: Posts | UnboxHub</title>
-      </Head>
+      <HeadTitle title="Blog: Posts" />
       <Container maxWidth={themeStretch ? false : 'lg'}>
         <Typography
           variant="h4"

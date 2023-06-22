@@ -68,7 +68,7 @@ function Description() {
     >
       <m.div variants={varFade().inDown}>
         <Typography variant="overline" component="div" sx={{ color: 'text.disabled' }}>
-          UnboxHub
+          TechHubAI
         </Typography>
       </m.div>
 

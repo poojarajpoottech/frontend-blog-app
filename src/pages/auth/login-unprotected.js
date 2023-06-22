@@ -1,17 +1,12 @@
-// next
-import Head from 'next/head';
-// sections
 import Login from '../../sections/auth/Login';
+import HeadTitle from '../../components/HeadTitle';
 
 // ----------------------------------------------------------------------
 
 export default function LoginUnprotectedPage() {
   return (
     <>
-      <Head>
-        <title> Login Unprotected | UnboxHub</title>
-      </Head>
-
+      <HeadTitle title="Login Unprotected" />
       <Login />
     </>
   );

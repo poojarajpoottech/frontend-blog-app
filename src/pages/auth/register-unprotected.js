@@ -1,17 +1,12 @@
-// next
-import Head from 'next/head';
-// sections
 import Register from '../../sections/auth/Register';
+import HeadTitle from '../../components/HeadTitle';
 
 // ----------------------------------------------------------------------
 
 export default function RegisterUnprotectedPage() {
   return (
     <>
-      <Head>
-        <title> Register Unprotected | Minimal UI</title>
-      </Head>
-
+      <HeadTitle title="Register Unprotected" />
       <Register />
     </>
   );

@@ -1,11 +1,9 @@
-// next
-import Head from 'next/head';
-// @mui
 import { Box, Container, Typography } from '@mui/material';
 // layouts
 import MainLayout from '../layouts/main';
 // sections
 import { FaqsHero, FaqsList, FaqsForm } from '../sections/faqs';
+import HeadTitle from '../components/HeadTitle';
 
 // ----------------------------------------------------------------------
 
@@ -16,9 +14,7 @@ FaqsPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 export default function FaqsPage() {
   return (
     <>
-      <Head>
-        <title> Faqs | UnboxHub</title>
-      </Head>
+      <HeadTitle title="Faqs" />
 
       <FaqsHero />
 

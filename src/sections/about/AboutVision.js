@@ -17,11 +17,10 @@ export default function AboutVision() {
         <Typography
           sx={{ textAlign: 'center', maxWidth: 800, color: 'text.secondary', mx: 'auto' }}
         >
-          At the core of our vision is the belief that knowledge empowers consumers. We aim to
-          provide transparent and unbiased information about the products we unbox, ensuring that
-          our audience has all the necessary details to make informed choices. Our reviews go beyond
-          the surface-level features and delve deep into the quality, performance, and overall value
-          of each product.
+          Our vision is to create a platform where individuals from diverse backgrounds can come
+          together to explore and expand their understanding of life learning, AI, and frontend
+          skills. We strive to build a community that values collaboration, curiosity, and the
+          pursuit of excellence.
         </Typography>
       </m.div>
     </Container>

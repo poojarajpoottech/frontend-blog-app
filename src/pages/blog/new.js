@@ -1,6 +1,3 @@
-// next
-import Head from 'next/head';
-// @mui
 import { Container } from '@mui/material';
 // routes
 import { PATH_DASHBOARD } from '../../routes/paths';
@@ -11,6 +8,7 @@ import { useSettingsContext } from '../../components/settings';
 import CustomBreadcrumbs from '../../components/custom-breadcrumbs';
 // sections
 import BlogNewPostForm from '../../sections/blog/BlogNewPostForm';
+import HeadTitle from '../../components/HeadTitle';
 
 // ----------------------------------------------------------------------
 
@@ -23,9 +21,7 @@ export default function BlogNewPostPage() {
 
   return (
     <>
-      <Head>
-        <title> Blog: New Post | UnboxHub</title>
-      </Head>
+      <HeadTitle title="Blog: New Post" />
 
       <Container sx={{ mb: 10 }} maxWidth={themeStretch ? false : 'lg'}>
         <CustomBreadcrumbs

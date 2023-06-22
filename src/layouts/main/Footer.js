@@ -9,7 +9,7 @@ import Iconify from '../../components/iconify';
 
 const LINKS = [
   {
-    headline: 'UnboxHub',
+    headline: 'TechHubAI',
     children: [
       { name: 'About us', href: PATH_PAGE.about },
       { name: 'Contact us', href: PATH_PAGE.contact },
@@ -26,7 +26,7 @@ const LINKS = [
   {
     headline: 'Contact',
     children: [
-      { name: 'unboxhub@gmail.com', href: '#' },
+      { name: 'TechHubAI@gmail.com', href: '#' },
       { name: '91+ 7869351845', href: '#' },
       {
         name: 'Roopena Agrahara, Bengaluru, Karnataka 560068',
@@ -67,9 +67,9 @@ export default function Footer() {
 
           <Grid item xs={8} md={3}>
             <Typography variant="body2" sx={{ pr: { md: 5 } }}>
-              Join us at UnboxPros and embark on a journey of discovery. Uncover the best products,
-              gain valuable insights, and make confident choices. Your unboxing adventure starts
-              here.
+              Learn more about our website and its purpose. Discover our mission, values, and the
+              team behind our platform. We are dedicated to providing valuable resources and
+              fostering a vibrant community centered around life learning, AI, and frontend skills.
             </Typography>
 
             <Stack
@@ -142,7 +142,7 @@ export default function Footer() {
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
-          Copyright © 2023 UnboxHub. All Rights Reserved.
+          Copyright © 2023 TechHubAI. All Rights Reserved.
         </Typography>
       </Container>
     </Box>

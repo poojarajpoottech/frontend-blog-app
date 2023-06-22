@@ -1,6 +1,4 @@
 import { m } from 'framer-motion';
-// next
-import Head from 'next/head';
 import NextLink from 'next/link';
 // @mui
 import { Button, Typography } from '@mui/material';
@@ -10,6 +8,7 @@ import CompactLayout from '../layouts/compact';
 import { MotionContainer, varBounce } from '../components/animate';
 // assets
 import { ForbiddenIllustration } from '../assets/illustrations';
+import HeadTitle from '../components/HeadTitle';
 
 // ----------------------------------------------------------------------
 
@@ -20,9 +19,7 @@ Page403.getLayout = (page) => <CompactLayout>{page}</CompactLayout>;
 export default function Page403() {
   return (
     <>
-      <Head>
-        <title> 403 Forbidden | UnboxHub</title>
-      </Head>
+      <HeadTitle title="403 Forbidden" />
 
       <MotionContainer>
         <m.div variants={varBounce().in}>

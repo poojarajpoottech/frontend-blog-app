@@ -1,6 +1,4 @@
 import { m } from 'framer-motion';
-// next
-import Head from 'next/head';
 import NextLink from 'next/link';
 // @mui
 import { Button, Typography } from '@mui/material';
@@ -10,6 +8,7 @@ import CompactLayout from '../layouts/compact';
 import { MotionContainer, varBounce } from '../components/animate';
 // assets
 import { SeverErrorIllustration } from '../assets/illustrations';
+import HeadTitle from '../components/HeadTitle';
 
 // ----------------------------------------------------------------------
 
@@ -20,10 +19,7 @@ Page500.getLayout = (page) => <CompactLayout>{page}</CompactLayout>;
 export default function Page500() {
   return (
     <>
-      <Head>
-        <title> 500 Internal Server Error | UnboxHub</title>
-      </Head>
-
+      <HeadTitle title="500 Internal Server Error" />
       <MotionContainer>
         <m.div variants={varBounce().in}>
           <Typography variant="h3" paragraph>

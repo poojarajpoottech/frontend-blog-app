@@ -1,6 +1,3 @@
-// next
-import Head from 'next/head';
-// @mui
 import { Divider } from '@mui/material';
 // layouts
 import MainLayout from '../layouts/main';
@@ -13,6 +10,7 @@ import {
   AboutTestimonials,
   AboutMe,
 } from '../sections/about';
+import HeadTitle from '../components/HeadTitle';
 
 // ----------------------------------------------------------------------
 
@@ -23,9 +21,7 @@ AboutPage.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 export default function AboutPage() {
   return (
     <>
-      <Head>
-        <title> About us | UnboxHub</title>
-      </Head>
+      <HeadTitle title="About US" />
 
       <AboutHero />
       <AboutMe />

@@ -59,20 +59,11 @@ export default function AboutHero() {
                 fontWeight: 'fontWeightMedium',
               }}
             >
-              Welcome to my website, where the world of unboxing and product exploration comes
-              alive! I am thrilled to introduce myself and share my unwavering passion for unboxing
-              a diverse range of products, providing you with valuable insights along the way. As a
-              dedicated enthusiast and content creator, I am deeply committed to discovering new
-              products and sharing my experiences with you. Through my website, I strive to be your
-              trusted source of information and recommendations, guiding you in the exciting realm
-              of unboxing and exploring a wide variety of products. Your satisfaction is my top
-              priority, and I am here to serve you. I encourage you to engage with my content, share
-              your feedback, and express your thoughts. Your input is invaluable as it enables me to
-              continually refine and customize my content to meet your specific needs and interests.
-              Let's embark on this exhilarating journey of unboxing and discovery together, where we
-              will uncover remarkable products, unravel their unique features, and explore their
-              limitless potential. Thank you for being a part of my website and placing your trust
-              in me as your companion and guide in the vibrant world of unboxing.
+              My name is Satyendra, and I hail from Uttar Pradesh. I am an experienced software
+              developer with more than three years of expertise in this dynamic field. Throughout my
+              career, I have successfully contributed to numerous projects, showcasing my skills and
+              dedication. Presently, I am based in Bengaluru, a thriving hub for technology and
+              innovation.
             </Typography>
           </m.div>
         </StyledContent>
