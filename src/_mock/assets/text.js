@@ -1,23 +1,27 @@
 // ----------------------------------------------------------------------
 
 export const title = [
-  `What is product unboxing?`,
-  `What kind of products do you unbox on your website?`,
-  `How do you select the products for unboxing?`,
-  `Are your unboxing reviews unbiased?`,
-  `Do you receive compensation for featuring products?`,
-  `Can I request a specific product for unboxing?`,
-  `How can I stay updated with your latest unboxing videos and reviews?`,
-  `Can I purchase the products you unbox directly from your website?`,
+  `Who are you as a frontend developer?`,
+  `How did you showcase your technical knowledge as a frontend developer on your portfolio website?`,
+  `Can you explain the process you followed for designing and developing your portfolio website?`,
+  `How did you choose the technologies and frameworks used in your portfolio projects?`,
+  `How did you handle the design and UX considerations in your portfolio projects?`,
+  `Did you collaborate with any team members or clients on your portfolio projects?`,
+  `How do you stay updated with the latest trends and technologies in frontend development?`,
+  `Can you tell us about your portfolio website and the purpose behind creating it?`,
+  `Can you explain your role and contributions in the projects displayed on your portfolio?`,
+  `What technologies and frameworks have you used in your frontend development projects?`,
 ];
 
 export const description = [
-  `Product unboxing refers to the process of unveiling and exploring a newly purchased or received product. It involves opening the packaging, examining the contents, and sharing the experience with others.`,
-  `We unbox a wide range of products across various categories such as electronics, gadgets, beauty, fashion, home appliances, and more. Our goal is to provide diverse content and cater to different interests and needs.`,
-  `We carefully research and select products based on their popularity, relevance, and consumer demand. We consider factors such as product quality, innovation, customer reviews, and industry trends to ensure we bring you engaging and informative unboxing experiences.`,
-  `Yes, our unboxing reviews are unbiased and based on our genuine experiences and opinions. We strive to provide honest assessments of the products, highlighting their strengths and weaknesses to help you make informed decisions.`,
-  `Yes, we may receive compensation for featuring products on our website. This can be in the form of sponsored content, affiliate partnerships, or collaborations with brands. However, it does not influence our reviews, and we remain committed to providing transparent and objective information.`,
-  `We value your suggestions and feedback. While we cannot guarantee fulfilling every request, we are open to considering product suggestions from our audience. Feel free to reach out to us with your recommendations.`,
-  `To stay updated, you can subscribe to our newsletter, follow us on social media platforms, or regularly visit our website. We regularly post new unboxing videos, reviews, and informative content to keep you informed about the latest products and trends.`,
-  `We provide links to trusted online retailers where you can purchase the products featured on our website. By clicking on these links, you will be redirected to the respective retailer's website for further details and purchase options.`,
+  `As a frontend developer with 4 years of experience, I am passionate about crafting exceptional user experiences. With a strong command of HTML, CSS, and JavaScript, I specialize in leveraging the power of React.js to build interactive and dynamic web applications. Throughout my career, I have worked on diverse projects, refining my skills in responsive web design, ensuring cross-browser compatibility, and optimizing code for performance. With a meticulous attention to detail, I strive to deliver high-quality, pixel-perfect designs that captivate users. I have a creative mindset and a drive for continuous learning, always staying updated with the latest industry trends and best practices. Collaboration is at the heart of my work, as I seamlessly collaborate with cross-functional teams to bring ideas to life. My ultimate goal is to create intuitive, visually appealing, and high-performing web applications that go beyond users' expectations.`,
+  `On my portfolio website, I have dedicated sections to highlight my technical knowledge as a frontend developer. I provide information about the technologies and frameworks I have experience with, such as React.js, JavaScript, CSS, and HTML. Additionally, I showcase my expertise in frontend development by describing the projects I have completed, explaining the challenges I faced, and showcasing the solutions I implemented.`,
+  `The process of designing and developing my portfolio website involved several steps. Initially, I planned the overall structure and layout, ensuring a clean and user-friendly design. Then, I utilized my frontend development skills to implement the design using HTML, CSS, and React.js. Throughout the process, I focused on creating an intuitive navigation flow and ensuring that the website is responsive and accessible across different devices.`,
+  `When selecting technologies and frameworks for my portfolio projects, I prioritize using modern and widely adopted tools that align with industry standards. In the frontend domain, I have utilized popular frameworks such as React.js, along with complementary technologies like HTML, CSS, and JavaScript. These choices ensure that my projects are built using cutting-edge technologies and best practices.`,
+  `Design and user experience (UX) are essential aspects of frontend development, and I paid close attention to them in my portfolio projects. I followed industry best practices in terms of color schemes, typography, and visual hierarchy to create visually appealing and user-friendly interfaces. Additionally, I ensured that the navigation is intuitive, the content is well-organized, and the overall user experience is smooth and engaging.`,
+  `Yes, some of my portfolio projects involved collaboration with team members and clients. I have experience working in both collaborative team environments and client-driven projects. During these collaborations, I actively participated in meetings, communicated project progress, and incorporated feedback from team members and clients to deliver successful outcomes.`,
+  `As a frontend developer, I believe in the importance of staying updated with the latest trends and technologies. I regularly engage in professional development by following industry blogs, participating in online communities, attending webinars, and exploring relevant online resources. Additionally,`,
+  `My portfolio website serves as a showcase of my works and technical knowledge as a frontend developer. It demonstrates the projects I have worked on, highlighting my skills, expertise, and the technologies I have used. The purpose of the website is to provide a comprehensive overview of my capabilities and achievements in the field.`,
+  `In each project displayed on my portfolio, I played a key role as a frontend developer. I was responsible for implementing the user interface, translating design mockups into code, and ensuring a seamless user experience. I collaborated closely with designers, backend developers, and stakeholders to deliver the desired functionalities and meet project objectives. I also paid attention to code quality, maintainability, and performance optimization.`,
+  ` In my 4 years of experience as a frontend developer, I have gained proficiency in a range of technologies and frameworks. Some of the key ones include HTML, CSS, JavaScript,Typescript, and of course, React.js. I have also worked with popular frontend frameworks and libraries like Redux for state management, Next.js for server-side rendering, and various CSS frameworks like Bootstrap or Material UI. My portfolio website demonstrates how I have applied these technologies in real-world projects.`,
 ];

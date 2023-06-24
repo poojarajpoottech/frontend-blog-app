@@ -1,44 +1,49 @@
+import PropTypes from 'prop-types';
 import { m } from 'framer-motion';
 // @mui
-import { styled, alpha } from '@mui/material/styles';
-import { Container, InputAdornment, Stack, TextField } from '@mui/material';
+import { alpha, useTheme } from '@mui/material/styles';
+import Stack from '@mui/material/Stack';
+import Container from '@mui/material/Container';
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
+import InputAdornment from '@mui/material/InputAdornment';
+import { outlinedInputClasses } from '@mui/material/OutlinedInput';
+// theme
+import { bgGradient } from 'src/theme/css';
 // components
-import Iconify from '../../components/iconify';
-import { MotionContainer, TextAnimate, varFade } from '../../components/animate';
-
-// ----------------------------------------------------------------------
-
-const StyledRoot = styled('div')(({ theme }) => ({
-  position: 'relative',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundImage: 'url(/assets/background/overlay_1.svg), url(/assets/images/faqs/hero.jpg)',
-  padding: theme.spacing(10, 0),
-  [theme.breakpoints.up('md')]: {
-    height: 560,
-    padding: 0,
-  },
-}));
-
-const StyledContent = styled('div')(({ theme }) => ({
-  textAlign: 'center',
-  [theme.breakpoints.up('md')]: {
-    bottom: 80,
-    textAlign: 'left',
-    position: 'absolute',
-  },
-}));
+import Iconify from 'src/components/iconify';
+import { MotionContainer, varFade } from 'src/components/animate';
 
 // ----------------------------------------------------------------------
 
 export default function FaqsHero() {
+  const theme = useTheme();
+
   return (
-    <StyledRoot>
+    <Box
+      sx={{
+        ...bgGradient({
+          color: alpha(theme.palette.grey[900], 0.8),
+          imgUrl: '/assets/images/faqs/hero.jpg',
+        }),
+        height: { md: 560 },
+        py: { xs: 10, md: 0 },
+        overflow: 'hidden',
+        position: 'relative',
+      }}
+    >
       <Container component={MotionContainer}>
-        <StyledContent>
+        <Box
+          sx={{
+            bottom: { md: 80 },
+            position: { md: 'absolute' },
+            textAlign: { xs: 'center', md: 'unset' },
+          }}
+        >
           <div>
             <TextAnimate text="How" sx={{ color: 'primary.main' }} variants={varFade().inRight} />
             <br />
+
             <Stack spacing={2} display="inline-flex" direction="row" sx={{ color: 'common.white' }}>
               <TextAnimate text="can" />
               <TextAnimate text="we" />
@@ -47,8 +52,9 @@ export default function FaqsHero() {
             </Stack>
           </div>
 
-          <m.div variants={varFade().inUp}>
+          <m.div variants={varFade().in}>
             <TextField
+              fullWidth
               placeholder="Search support..."
               InputProps={{
                 startAdornment: (
@@ -59,28 +65,47 @@ export default function FaqsHero() {
               }}
               sx={{
                 mt: 5,
-                '& fieldset': { display: 'none' },
-                '& .MuiOutlinedInput-root': {
-                  width: 280,
-                  color: 'common.white',
+                maxWidth: 360,
+                [`& .${outlinedInputClasses.root}`]: {
+                  bgcolor: 'common.white',
+                },
+                [`& .${outlinedInputClasses.input}`]: {
                   typography: 'subtitle1',
-                  border: (theme) => `solid 1px ${alpha(theme.palette.common.white, 0.24)}`,
-                  transition: (theme) =>
-                    theme.transitions.create(['box-shadow', 'width', 'background-color'], {
-                      duration: theme.transitions.duration.shorter,
-                    }),
-                  '&.Mui-focused': {
-                    color: 'grey.800',
-                    bgcolor: 'common.white',
-                    width: { sm: 320 },
-                    boxShadow: (theme) => theme.customShadows.z20,
-                  },
                 },
               }}
             />
           </m.div>
-        </StyledContent>
+        </Box>
       </Container>
-    </StyledRoot>
+    </Box>
   );
 }
+
+// ----------------------------------------------------------------------
+
+function TextAnimate({ text, variants, sx, ...other }) {
+  return (
+    <Box
+      component={m.div}
+      sx={{
+        typography: 'h1',
+        overflow: 'hidden',
+        display: 'inline-flex',
+        ...sx,
+      }}
+      {...other}
+    >
+      {text.split('').map((letter, index) => (
+        <m.span key={index} variants={variants || varFade().inUp}>
+          {letter}
+        </m.span>
+      ))}
+    </Box>
+  );
+}
+
+TextAnimate.propTypes = {
+  sx: PropTypes.object,
+  text: PropTypes.string,
+  variants: PropTypes.object,
+};

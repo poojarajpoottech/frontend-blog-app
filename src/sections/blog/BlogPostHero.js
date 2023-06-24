@@ -4,16 +4,16 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
 import Container from '@mui/material/Container';
-import SpeedDial from '@mui/material/SpeedDial';
+// import SpeedDial from '@mui/material/SpeedDial';
 import Typography from '@mui/material/Typography';
 import ListItemText from '@mui/material/ListItemText';
-import SpeedDialAction from '@mui/material/SpeedDialAction';
-import { _socials } from '../../_mock/arrays';
-import useResponsive from '../../hooks/useResponsive';
+// import SpeedDialAction from '@mui/material/SpeedDialAction';
+// import { _socials } from '../../_mock/arrays';
+// import useResponsive from '../../hooks/useResponsive';
 import { fDate } from '../../utils/formatTime';
 import { bgGradient } from '../../theme/css';
 // components
-import Iconify from '../../components/iconify';
+// import Iconify from '../../components/iconify';
 
 BlogPostHero.propTypes = {
   post: PropTypes.object,
@@ -23,7 +23,7 @@ export default function BlogPostHero({ post }) {
   const { cover, title, createdAt } = post;
   const theme = useTheme();
 
-  const smUp = useResponsive('up', 'sm');
+  // const smUp = useResponsive('up', 'sm');
   return (
     <Box
       sx={{
@@ -82,7 +82,7 @@ export default function BlogPostHero({ post }) {
             />
           </Stack>
 
-          <SpeedDial
+          {/* <SpeedDial
             direction={smUp ? 'left' : 'up'}
             ariaLabel="Share post"
             icon={<Iconify icon="solar:share-bold" />}
@@ -102,7 +102,7 @@ export default function BlogPostHero({ post }) {
                 FabProps={{ color: 'default' }}
               />
             ))}
-          </SpeedDial>
+          </SpeedDial> */}
         </Stack>
       </Container>
     </Box>

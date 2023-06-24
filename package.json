@@ -36,6 +36,7 @@
     "bcryptjs": "^2.4.3",
     "change-case": "^4.1.2",
     "date-fns": "^2.29.3",
+    "eslint-import-resolver-alias": "^1.1.2",
     "formik": "^2.4.2",
     "framer-motion": "^9.0.4",
     "highlight.js": "^11.7.0",

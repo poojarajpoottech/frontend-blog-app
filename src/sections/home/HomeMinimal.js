@@ -96,11 +96,11 @@ export default function HomeMinimal() {
           </m.div>
           <m.div variants={varFade().inUp}>
             <Typography variant="subtitle1">
-              We understand that learning is a continuous process, so we encourage you to explore
-              our website regularly as we update our content to reflect the ever-evolving landscape
-              of AI and frontend skills. Our aim is to provide you with a comprehensive and
-              enriching learning experience that empowers you to excel in your personal and
-              professional endeavors.
+              As a frontend developer, I am here to offer my expertise and support. Whether you're
+              seeking a collaborator for your next project, need assistance with web development
+              challenges, or looking for a passionate professional to join your team, I am ready to
+              make a difference. Let's connect and explore how we can create amazing web experiences
+              together
             </Typography>
           </m.div>
         </Stack>

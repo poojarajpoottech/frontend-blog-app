@@ -1,7 +1,7 @@
 // next
 import NextLink from 'next/link';
 import { alpha } from '@mui/material/styles';
-import { Box, Grid, Link, Stack, Container, Typography, IconButton } from '@mui/material';
+import { Box, Grid, Link, Stack, Container, Typography, IconButton, Divider } from '@mui/material';
 import { PATH_PAGE } from '../../routes/paths';
 import { _socials } from '../../_mock/arrays';
 import Logo from '../../components/logo';
@@ -47,6 +47,7 @@ export default function Footer() {
         bgcolor: 'background.default',
       }}
     >
+      <Divider />
       <Container sx={{ pt: 10 }}>
         <Grid
           container
@@ -67,9 +68,10 @@ export default function Footer() {
 
           <Grid item xs={8} md={3}>
             <Typography variant="body2" sx={{ pr: { md: 5 } }}>
-              Learn more about our website and its purpose. Discover our mission, values, and the
-              team behind our platform. We are dedicated to providing valuable resources and
-              fostering a vibrant community centered around life learning, AI, and frontend skills.
+              Thank you for visiting my portfolio! I'm excited to connect with potential employers,
+              clients, and fellow developers. If you're interested in working together or have any
+              inquiries, feel free to reach out. Let's bring your ideas to life and create
+              exceptional web experiences.
             </Typography>
 
             <Stack

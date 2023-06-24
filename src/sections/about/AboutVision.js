@@ -17,10 +17,9 @@ export default function AboutVision() {
         <Typography
           sx={{ textAlign: 'center', maxWidth: 800, color: 'text.secondary', mx: 'auto' }}
         >
-          Our vision is to create a platform where individuals from diverse backgrounds can come
-          together to explore and expand their understanding of life learning, AI, and frontend
-          skills. We strive to build a community that values collaboration, curiosity, and the
-          pursuit of excellence.
+          At the heart of my work is a clear vision—to create meaningful and impactful web
+          experiences that leave a lasting impression. I believe in the power of design and
+          technology to shape our digital world and enrich the lives of users.
         </Typography>
       </m.div>
     </Container>

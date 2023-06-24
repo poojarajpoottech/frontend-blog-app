@@ -104,9 +104,16 @@ export default function AboutTestimonials() {
 
               <m.div variants={varFade().inUp}>
                 <Typography sx={{ color: 'common.white' }}>
-                  Our work at TechHubAI is appreciated and loved by a diverse community of
-                  individuals who are passionate about life learning, AI, and frontend skills. Here
-                  are some groups of people who find value and enjoyment in what we offer:
+                  Don't just take my word for it—here's what clients, collaborators, and fellow
+                  developers have to say about my work:
+                </Typography>
+              </m.div>
+              <m.div variants={varFade().inLeft}>
+                <Typography sx={{ color: 'common.white' }}>
+                  These testimonials are a testament to my dedication, expertise, and the positive
+                  impact I strive to make through my frontend development projects. I am grateful
+                  for the opportunity to work with amazing individuals and organizations who
+                  appreciate the value I bring to their digital initiatives.
                 </Typography>
               </m.div>
 

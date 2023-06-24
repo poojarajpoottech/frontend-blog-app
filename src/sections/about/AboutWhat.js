@@ -86,10 +86,12 @@ export default function AboutWhat() {
                   color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                 }}
               >
-                TechHubAI is an innovative and dynamic online platform dedicated to exploring the
-                realms of technology, specifically focusing on AI (Artificial Intelligence) and
-                frontend skills. We are passionate about providing valuable resources, knowledge,
-                and a supportive community for individuals interested in these exciting fields.
+                TECHPORTFOLIO is a platform dedicated to showcasing my skills, expertise, and
+                passion as a frontend developer. Here, you'll find a curated collection of my
+                projects that demonstrate my abilities and highlight my commitment to creating
+                exceptional web experiences. Feel free to personalize and modify the description to
+                accurately represent your portfolio and convey your unique qualities as a frontend
+                developer.
               </Typography>
             </m.div>
 

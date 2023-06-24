@@ -33,12 +33,7 @@ const StyledRoot = styled('div')(({ theme }) => ({
     position: 'fixed',
   },
 }));
-// const VideoBackground = styled('video')({
-//   position: 'absolute',
-//   width: '100%',
-//   height: '100%',
-//   objectFit: 'cover',
-// });
+
 const StyledDescription = styled('div')(({ theme }) => ({
   margin: 'auto',
   display: 'flex',
@@ -75,7 +70,7 @@ const StyledTextGradient = styled(m.h1)(({ theme }) => ({
   fontSize: `${74 / 30}rem`,
   fontFamily: secondaryFont.style.fontFamily,
   [theme.breakpoints.up('md')]: {
-    fontSize: `${96 / 20}rem`,
+    fontSize: `${96 / 25}rem`,
   },
 }));
 
@@ -152,14 +147,15 @@ export default function HomeHero() {
             repeat: Infinity,
           }}
         >
-          WELCOME TO TECHHUBAI
+          WELCOME TO TECHPORTFOLIO
         </StyledTextGradient>
       </m.div>
 
       <m.div variants={varFade().in}>
-        <Typography variant="h5" sx={{ textAlign: 'center', maxWidth: '800px' }}>
-          &quot;Welcome to our dynamic website dedicated to exploring the exciting realms of
-          frontend programming, AI, ChatGPT, and the latest advancements in technology!&quot;
+        <Typography variant="h6" sx={{ textAlign: 'center', maxWidth: '800px' }}>
+          &quot;Passionate frontend developer crafting beautiful, engaging web experiences.
+          Showcasing innovative, responsive projects that demonstrate expertise in user-centered
+          design.&quot;
         </Typography>
       </m.div>
       <m.div variants={varFade().in}>
@@ -182,13 +178,7 @@ export default function HomeHero() {
         <Typography variant="h6" sx={{ color: 'grey.500' }}>
           <Typewriter
             options={{
-              strings: [
-                'Mern Developer',
-                'AI,ChatGPT',
-                'Web Designer',
-                'Latest Updates',
-                'YouTuber',
-              ],
+              strings: ['App Development', 'Web Developer', 'Latest Updates', 'YouTuber'],
               autoStart: true,
               loop: true,
               delay: 90,
@@ -233,10 +223,6 @@ export default function HomeHero() {
           }),
         }}
       >
-        {/* <VideoBackground autoPlay loop muted>
-          <source src="/assets/background/homevideo.mp4" type="video/mp4" />
-        </VideoBackground> */}
-
         <StyledWrapper>
           <Container component={MotionContainer} sx={{ height: 1 }}>
             <Grid container columnSpacing={{ md: 10 }} sx={{ height: 1 }}>
