@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
-import {
-  Grid,
-  Paper,
-  Typography,
-  Button,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-} from '@mui/material';
-import { Document, Page, pdfjs } from 'react-pdf';
-
-pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+import { Grid, Typography, Button, Dialog, DialogActions, Box, Card } from '@mui/material';
+import { PDFViewer, Document, Page } from '@react-pdf/renderer';
+import Stack from '@mui/material/Stack';
+import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import Iconify from '../../components/iconify';
 
 const certificates = [
   {
@@ -74,48 +67,70 @@ export default function CertificatePage() {
       <Grid container spacing={2}>
         {certificates.map((certificate) => (
           <Grid item xs={12} sm={6} md={4} key={certificate.id}>
-            <Paper
-              elevation={3}
-              style={{
-                padding: '1rem',
-                height: '100%',
-              }}
-            >
-              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}>
+            <Card sx={{ p: 3 }}>
+              <Box
+                sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', marginBottom: '0.5rem' }}
+              >
                 <div style={{ flex: '1' }}>
                   <Typography variant="h6">{certificate.title}</Typography>
                   <Typography variant="body2" color="textSecondary">
                     Date: {certificate.date}
                   </Typography>
                 </div>
-                <Button variant="outlined" onClick={() => handleOpenCertificate(certificate)}>
-                  View PDF
-                </Button>
-              </div>
-              <Typography variant="caption">Institute Name -{certificate.InstituteName}</Typography>
-            </Paper>
+                <Stack
+                  spacing={3}
+                  direction={{ xs: 'column', sm: 'row' }}
+                  alignItems={{ xs: 'flex-end', sm: 'center' }}
+                  sx={{ mb: { xs: 3, md: 5 } }}
+                >
+                  <Stack direction="row" spacing={1} flexGrow={1} sx={{ width: 1 }}>
+                    <Tooltip title="View">
+                      <IconButton onClick={() => handleOpenCertificate(certificate)}>
+                        <Iconify icon="solar:eye-bold" />
+                      </IconButton>
+                    </Tooltip>
+
+                    <Tooltip title="Download">
+                      <a
+                        href={certificate.pdfUrl}
+                        download={`${certificate.title}.pdf`}
+                        style={{ textDecoration: 'none' }}
+                      >
+                        <Tooltip title="Download">
+                          <IconButton>
+                            <Iconify icon="eva:cloud-download-fill" />
+                          </IconButton>
+                        </Tooltip>
+                      </a>
+                    </Tooltip>
+                  </Stack>
+                </Stack>
+              </Box>
+              <Typography variant="subtitle2">
+                Institute Name - {certificate.InstituteName}
+              </Typography>
+            </Card>
           </Grid>
         ))}
       </Grid>
 
-      <Dialog
-        open={selectedCertificate !== null}
-        onClose={handleCloseCertificate}
-        maxWidth="md"
-        fullWidth
-      >
+      <Dialog open={selectedCertificate !== null} onClose={handleCloseCertificate} fullScreen>
         {selectedCertificate && (
-          <>
-            <DialogTitle>{selectedCertificate.title}</DialogTitle>
-            <DialogContent>
-              <Document file={selectedCertificate.pdfUrl}>
-                <Page pageNumber={1} width={800} />
-              </Document>
-            </DialogContent>
-            <DialogActions>
-              <Button onClick={handleCloseCertificate}>Close</Button>
+          <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+            <DialogActions sx={{ p: 1.5 }}>
+              <Button color="inherit" variant="contained" onClick={handleCloseCertificate}>
+                Close
+              </Button>
             </DialogActions>
-          </>
+
+            <Box sx={{ flexGrow: 1, height: '100%', overflow: 'hidden' }}>
+              <PDFViewer width="100%" height="100%" style={{ border: 'none' }}>
+                <Document file={selectedCertificate.pdfUrl}>
+                  <Page pageNumber={1} />
+                </Document>
+              </PDFViewer>
+            </Box>
+          </Box>
         )}
       </Dialog>
     </>

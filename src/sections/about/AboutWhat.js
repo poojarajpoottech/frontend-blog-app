@@ -2,19 +2,22 @@ import PropTypes from 'prop-types';
 import { m } from 'framer-motion';
 // @mui
 import { alpha, useTheme, styled } from '@mui/material/styles';
-import { Box, Grid, Button, Container, Typography, LinearProgress } from '@mui/material';
+import { Box, Grid, Button, Container, Typography, LinearProgress, Stack } from '@mui/material';
 // hooks
 import useResponsive from '../../hooks/useResponsive';
 // utils
 import { fPercent } from '../../utils/formatNumber';
-// _mock_
-import { _skills } from '../../_mock/arrays';
+
 // components
 import Image from '../../components/image';
 import Iconify from '../../components/iconify';
 import { MotionViewport, varFade } from '../../components/animate';
 
 // ----------------------------------------------------------------------
+export const SKILLS = [...Array(5)].map((_, index) => ({
+  label: ['User Interface', 'JavaScript', 'React JS', 'TypeScript', 'Next JS'][index],
+  value: [90, 80, 90, 60, 70][index],
+}));
 
 const StyledRoot = styled('div')(({ theme }) => ({
   textAlign: 'center',
@@ -94,14 +97,33 @@ export default function AboutWhat() {
                 developer.
               </Typography>
             </m.div>
+            <Stack spacing={3} sx={{ my: 5 }}>
+              {SKILLS.map((progress, index) => (
+                <Box component={m.div} key={progress.label} variants={varFade().inRight}>
+                  <Stack direction="row" alignItems="center" sx={{ mb: 1 }}>
+                    <Typography variant="subtitle2" sx={{ flexGrow: 1, textAlign: 'left' }}>
+                      {progress.label}
+                    </Typography>
 
-            <Box sx={{ my: 5 }}>
-              {_skills.map((progress) => (
-                <m.div key={progress.label} variants={varFade().inRight}>
-                  <ProgressItem progress={progress} />
-                </m.div>
+                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                      {fPercent(progress.value)}
+                    </Typography>
+                  </Stack>
+
+                  <LinearProgress
+                    color={
+                      (index === 0 && 'primary') ||
+                      (index === 1 && 'warning') ||
+                      (index === 2 && 'secondary') ||
+                      (index === 3 && 'info') ||
+                      'error'
+                    }
+                    variant="determinate"
+                    value={progress.value}
+                  />
+                </Box>
               ))}
-            </Box>
+            </Stack>
 
             <m.div variants={varFade().inRight}>
               <Button
@@ -110,7 +132,7 @@ export default function AboutWhat() {
                 size="large"
                 endIcon={<Iconify icon="ic:round-arrow-right-alt" width={24} />}
               >
-                Check out our Blogs
+                Our Work
               </Button>
             </m.div>
           </Grid>

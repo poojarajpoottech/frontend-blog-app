@@ -9,20 +9,20 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Typewriter from 'typewriter-effect';
 
 // theme
+import useResponsive from '../../hooks/useResponsive';
 import { textGradient, bgGradient, bgBlur } from '../../theme/css';
 import { secondaryFont } from '../../theme/typography';
 // layouts
 import { HEADER } from '../../layouts/config-layout';
 import SvgColor from '../../components/svg-color';
-
 import { MotionContainer, varFade } from '../../components/animate';
 
 // ----------------------------------------------------------------------
 
 const StyledRoot = styled('div')(({ theme }) => ({
   ...bgGradient({
-    color: alpha(theme.palette.background.default, theme.palette.mode === 'light' ? 0 : 0.94),
-    imgUrl: '/assets/background/home_bg.svg',
+    color: alpha(theme.palette.background.default, theme.palette.mode === 'light' ? 0.2 : 0.94),
+    imgUrl: '/assets/background/portfolio_banner.webp',
   }),
   width: '100%',
   height: '100vh',
@@ -31,18 +31,6 @@ const StyledRoot = styled('div')(({ theme }) => ({
     top: 0,
     left: 0,
     position: 'fixed',
-  },
-}));
-
-const StyledDescription = styled('div')(({ theme }) => ({
-  margin: 'auto',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  padding: theme.spacing(15, 0),
-  [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(10, 0),
   },
 }));
 
@@ -55,23 +43,64 @@ const StyledWrapper = styled('div')(({ theme }) => ({
     marginTop: HEADER.H_DESKTOP_OFFSET,
   },
 }));
+// const StyledDescription = styled('div')(({ theme }) => ({
+//   margin: 'auto',
+//   display: 'flex',
+//   flexDirection: 'column',
+//   alignItems: 'center',
+//   justifyContent: 'center',
+//   padding: theme.spacing(15, 0),
+//   [theme.breakpoints.up('md')]: {
+//     padding: theme.spacing(10, 0),
+//   },
+// }));
+
+// const StyledTextGradient = styled(m.h1)(({ theme }) => ({
+//   ...textGradient(
+//     `300deg, ${theme.palette.primary.main} 0%, ${theme.palette.warning.main} 25%, ${theme.palette.primary.main} 50%, ${theme.palette.warning.main} 75%, ${theme.palette.primary.main} 100%`
+//   ),
+//   padding: 0,
+//   marginTop: 10,
+//   marginBottom: 24,
+//   letterSpacing: 8,
+//   lineHeight: 1,
+//   textAlign: 'center',
+//   backgroundSize: '400%',
+//   fontSize: `${64 / 16}rem`,
+//   fontFamily: secondaryFont.style.fontFamily,
+//   [theme.breakpoints.up('md')]: {
+//     fontSize: `${96 / 25}rem`,
+//   },
+// }));
 
 const StyledTextGradient = styled(m.h1)(({ theme }) => ({
   ...textGradient(
     `300deg, ${theme.palette.primary.main} 0%, ${theme.palette.warning.main} 25%, ${theme.palette.primary.main} 50%, ${theme.palette.warning.main} 75%, ${theme.palette.primary.main} 100%`
   ),
   padding: 0,
-  marginTop: 10,
+  marginTop: 8,
+  lineHeight: 1,
   marginBottom: 24,
   letterSpacing: 8,
-  lineHeight: 1,
   textAlign: 'center',
   backgroundSize: '400%',
-  fontSize: `${74 / 30}rem`,
+  fontSize: `${64 / 30}rem`,
   fontFamily: secondaryFont.style.fontFamily,
   [theme.breakpoints.up('md')]: {
     fontSize: `${96 / 25}rem`,
   },
+}));
+
+const StyledEllipseTop = styled('div')(({ theme }) => ({
+  top: -80,
+  width: 480,
+  right: -80,
+  height: 480,
+  borderRadius: '50%',
+  position: 'absolute',
+  filter: 'blur(100px)',
+  WebkitFilter: 'blur(100px)',
+  backgroundColor: alpha(theme.palette.primary.darker, 0.12),
 }));
 
 const StyledEllipseBottom = styled('div')(({ theme }) => ({
@@ -109,6 +138,7 @@ const StyledPolygon = styled('div')(({ opacity = 1, anchor = 'left', theme }) =>
 // ----------------------------------------------------------------------
 
 export default function HomeHero() {
+  const mdUp = useResponsive('up', 'md');
   const heroRef = useRef(null);
 
   const { scrollY } = useScroll();
@@ -132,11 +162,24 @@ export default function HomeHero() {
   useEffect(() => {
     getScroll();
   }, [getScroll]);
-
+  const opacity = 1 - percent / 100;
   const hide = percent > 120;
 
   const renderDescription = (
-    <StyledDescription>
+    <Stack
+      alignItems="center"
+      justifyContent="center"
+      sx={{
+        height: 1,
+        mx: 'auto',
+        opacity: opacity > 0 ? opacity : 0,
+
+        mt: {
+          md: `-${HEADER.H_DESKTOP + percent * 2.5}px`,
+          lg: 0.1,
+        },
+      }}
+    >
       <m.div variants={varFade().in}>
         <StyledTextGradient
           animate={{ backgroundPosition: '200% center' }}
@@ -192,14 +235,15 @@ export default function HomeHero() {
         </m.div>
 
         <Stack spacing={2} direction="row" justifyContent="center">
-          {['sketch', 'figma', 'js', 'ts', 'nextjs'].map((platform) => (
+          {['figma', 'js', 'ts', 'nextjs'].map((platform) => (
             <m.div key={platform} variants={varFade().in}>
               <SvgColor src={`/assets/icons/platforms/ic_${platform}.svg`} />
             </m.div>
           ))}
         </Stack>
       </Stack>
-    </StyledDescription>
+      {/* </StyledDescription> */}
+    </Stack>
   );
 
   const renderPolygons = (
@@ -211,7 +255,12 @@ export default function HomeHero() {
     </>
   );
 
-  const renderEllipses = <StyledEllipseBottom />;
+  const renderEllipses = (
+    <>
+      {mdUp && <StyledEllipseTop />}
+      <StyledEllipseBottom />
+    </>
+  );
 
   return (
     <>
@@ -225,13 +274,12 @@ export default function HomeHero() {
       >
         <StyledWrapper>
           <Container component={MotionContainer} sx={{ height: 1 }}>
-            <Grid container columnSpacing={{ md: 10 }} sx={{ height: 1 }}>
+            <Grid container sx={{ height: 1 }}>
               <Grid xs={12} md={12} sx={{ height: -1 }}>
                 {renderDescription}
               </Grid>
             </Grid>
           </Container>
-
           {renderEllipses}
         </StyledWrapper>
       </StyledRoot>
